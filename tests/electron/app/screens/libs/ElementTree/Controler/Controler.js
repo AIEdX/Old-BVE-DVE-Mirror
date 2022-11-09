@@ -1,26 +1,41 @@
+{
+    ElementTreeInterface;
+}
+from;
+"Meta/ElementTree.interface";
+{
+    ElementTreeData,
+        ElementTreeObject,
+        InputValueTypes,
+    ;
+}
+from;
+"Meta/Elements/ElementTreeData.types";
 export class Controller {
-    inputFunctions = {
-        string: (elm) => {
-            if (elm.type == "checkbox") {
-                return elm.checked ? "true" : "false";
-            }
-            return String(elm.value);
-        },
-        number: (elm) => {
-            if (elm.type == "checkbox") {
-                return elm.checked ? 1 : 0;
-            }
-            return Number(elm.value);
-        },
-        boolean: (elm) => {
-            if (elm.type == "checkbox") {
-                return elm.checked ? true : false;
-            }
-            return Boolean(elm.value);
-        },
-    };
-    statefulObjectMap = {};
-    cascadeObjectMap = {};
+    constructor() {
+        this.inputFunctions = {
+            string: (elm) => {
+                if (elm.type == "checkbox") {
+                    return elm.checked ? "true" : "false";
+                }
+                return String(elm.value);
+            },
+            number: (elm) => {
+                if (elm.type == "checkbox") {
+                    return elm.checked ? 1 : 0;
+                }
+                return Number(elm.value);
+            },
+            boolean: (elm) => {
+                if (elm.type == "checkbox") {
+                    return elm.checked ? true : false;
+                }
+                return Boolean(elm.value);
+            },
+        };
+        this.statefulObjectMap = {};
+        this.cascadeObjectMap = {};
+    }
     releaseAll() {
         this.statefulObjectMap = {};
         this.cascadeObjectMap = {};
@@ -28,8 +43,6 @@ export class Controller {
     releaseComponent(id) {
         delete this.statefulObjectMap[id];
     }
-    //@ts-ignore
-    elementTree;
     registerStatefulComponent(elmObj, componentElm) {
         if (!elmObj.component) {
             throw new Error("Must have a the component property set.");

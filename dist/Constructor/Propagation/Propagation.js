@@ -1,3 +1,8 @@
+{
+    VoxelSubstanceType;
+}
+from;
+"Meta/index.js";
 //objects
 import { DVEC } from "../DivineVoxelEngineConstructor.js";
 import { IlluminationManager } from "./Illumanation/IlluminationManager.js";

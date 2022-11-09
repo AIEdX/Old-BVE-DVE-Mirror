@@ -1,3 +1,8 @@
+{
+    DVEB;
+}
+from;
+"../DivineVoxelEngineBuilder";
 import { RegisterDefaultShapes } from "../Shapes/Functions/RegisterDefaultShapes.js";
 export function InitBuilder(DVEB) {
     DVEB.processor.$INIT();

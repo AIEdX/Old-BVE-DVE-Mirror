@@ -1,5 +1,7 @@
 export class SyncHook {
-    _onRun = [];
+    constructor() {
+        this._onRun = [];
+    }
     run(data) {
         let returnData = false;
         for (const run of this._onRun) {

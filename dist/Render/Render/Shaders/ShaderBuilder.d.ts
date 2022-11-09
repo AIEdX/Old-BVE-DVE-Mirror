@@ -1,4 +1,3 @@
-import type { VoxelSubstanceType } from "Meta/Data/Voxels/Voxel.types";
 /**# ShaderBuilder
  *---
  * Helps construct raw text shaders.
@@ -14,8 +13,8 @@ export declare const ShaderBuilder: {
     buildFluidFragmentShader(): string;
     buildFloraFragmentShader(): string;
     buildMagmaFragmentShader(): string;
-    getDefaultVertexShader(voxelSubstance: VoxelSubstanceType, uniformRegister?: string, animationFunction?: string, overlayUniformRegister?: string, ovlerayAnimationFunction?: string): string;
-    getDefaultFragmentShader(voxelSubstance: VoxelSubstanceType): string;
+    getDefaultVertexShader(voxelSubstance: any, uniformRegister?: string, animationFunction?: string, overlayUniformRegister?: string, ovlerayAnimationFunction?: string): string;
+    getDefaultFragmentShader(voxelSubstance: any): string;
     getSkyBoxVertexShader(): string;
     getSkyBoxFragmentShader(): string;
 };

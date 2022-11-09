@@ -1,4 +1,14 @@
 import { ConstructItemIndexes, ConstructorToRenderMessages, } from "../../../Common/Threads/Contracts/ConstructorToRender.js";
+{
+    CreateItemData;
+}
+from;
+"Meta/Constructor/ItemShape.type.js";
+{
+    ItemProcessData;
+}
+from;
+"Meta/Data/Items/Item.types.js";
 import { DVEC } from "../../DivineVoxelEngineConstructor.js";
 export const ItemMesher = {
     createItem(itemId, x, y, z) {

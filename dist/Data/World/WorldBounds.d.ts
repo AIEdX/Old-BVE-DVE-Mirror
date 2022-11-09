@@ -1,4 +1,3 @@
-import type { Position3Matrix } from "Meta/Util.types";
 /**# World Bounds
  * ---
  * This holds the data for the size of chunks, regions, and the world.
@@ -72,16 +71,16 @@ export declare const WorldBounds: {
         y: number;
         z: number;
     };
-    getChunkKey(chunkPOS: Position3Matrix): string;
+    getChunkKey(chunkPOS: any): string;
     getChunkKeyFromPosition(x: number, y: number, z: number): string;
-    getRegionKey(regionPOS: Position3Matrix): string;
+    getRegionKey(regionPOS: any): string;
     getRegionKeyFromPosition(x: number, y: number, z: number): string;
     /**# Get Voxel Position From Chunk Position
      * ---
      * Returns the x/y/z index of the voxel in the chunk.
      * Used to find actual index in the chunk array.
      */
-    getVoxelPositionFromChunkPosition(x: number, y: number, z: number, chunkPOS: Position3Matrix): {
+    getVoxelPositionFromChunkPosition(x: number, y: number, z: number, chunkPOS: any): {
         x: number;
         y: number;
         z: number;

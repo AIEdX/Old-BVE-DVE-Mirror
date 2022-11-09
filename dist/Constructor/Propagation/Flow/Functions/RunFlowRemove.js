@@ -1,3 +1,8 @@
+{
+    FlowManager;
+}
+from;
+"../FlowManager";
 export async function RunFlowRemove(x, y, z) {
     const check = this.setCurrentVoxel(x, y, z);
     this._visitedMap.clear();

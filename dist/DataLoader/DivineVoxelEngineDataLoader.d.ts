@@ -1,4 +1,3 @@
-import type { EngineSettingsData } from "Meta/index.js";
 export declare const DVEDL: {
     environment: "node" | "browser";
     __settingsHaveBeenSynced: boolean;
@@ -98,8 +97,8 @@ export declare const DVEDL: {
                 disableFluidShaderEffects: boolean;
             };
         };
-        getSettings(): EngineSettingsData;
-        syncSettings(data: EngineSettingsData): void;
+        getSettings(): any;
+        syncSettings(data: any): void;
         __syncWithObjects(): void;
         syncWithWorldBounds(worldBounds: {
             bounds: {
@@ -168,11 +167,11 @@ export declare const DVEDL: {
                 y: number;
                 z: number;
             };
-            getChunkKey(chunkPOS: import("Meta/index.js").Position3Matrix): string;
+            getChunkKey(chunkPOS: any): string;
             getChunkKeyFromPosition(x: number, y: number, z: number): string;
-            getRegionKey(regionPOS: import("Meta/index.js").Position3Matrix): string;
+            getRegionKey(regionPOS: any): string;
             getRegionKeyFromPosition(x: number, y: number, z: number): string;
-            getVoxelPositionFromChunkPosition(x: number, y: number, z: number, chunkPOS: import("Meta/index.js").Position3Matrix): {
+            getVoxelPositionFromChunkPosition(x: number, y: number, z: number, chunkPOS: any): {
                 x: number;
                 y: number;
                 z: number;
@@ -209,10 +208,10 @@ export declare const DVEDL: {
         doFlow(): boolean;
     };
     dataSyncNode: {
-        chunk: import("../Libs/ThreadComm/Data/DataSync.js").DataSync<import("../Meta/Data/DataSync.types.js").ChunkSyncData, import("../Meta/Data/DataSync.types.js").ChunkUnSyncData>;
-        voxelPalette: import("../Libs/ThreadComm/Data/DataSync.js").DataSync<import("../Meta/Data/DataSync.types.js").VoxelPaletteSyncData, any>;
-        voxelData: import("../Libs/ThreadComm/Data/DataSync.js").DataSync<import("../Meta/Data/DataSync.types.js").VoxelDataSync, any>;
-        dimension: import("../Libs/ThreadComm/Data/DataSync.js").DataSync<import("../Meta/Data/DimensionData.types.js").DimensionData, void>;
+        chunk: import("../Libs/ThreadComm/Data/DataSync.js").DataSync<any, any>;
+        voxelPalette: import("../Libs/ThreadComm/Data/DataSync.js").DataSync<any, any>;
+        voxelData: import("../Libs/ThreadComm/Data/DataSync.js").DataSync<any, any>;
+        dimension: import("../Libs/ThreadComm/Data/DataSync.js").DataSync<any, void>;
     };
     data: {
         voxelDataCreator: {
@@ -227,7 +226,7 @@ export declare const DVEDL: {
                 _count: number;
                 _palette: Record<number, string>;
                 _map: Record<string, number>;
-                registerVoxel(voxel: import("Meta/index.js").VoxelData): void;
+                registerVoxel(voxel: import("../Meta/index.js").VoxelData): void;
                 getVoxelBaseId(id: number): number;
                 getVoxelStateId(voxelId: string, voxelState: number): number;
                 getVoxelStringId(voxelId: number): string;
@@ -236,7 +235,7 @@ export declare const DVEDL: {
                 getMap(): Record<string, number>;
             };
         };
-        comms: Record<string, import("../Libs/ThreadComm/Comm/Comm.js").CommBase | import("../Libs/ThreadComm/Manager/CommManager.js").CommManager>;
+        comms: Record<string, any>;
         commOptions: Record<string, {
             chunks: boolean;
             voxelPalette: boolean;
@@ -244,12 +243,12 @@ export declare const DVEDL: {
         }>;
         $INIT(): void;
         isReady(): boolean;
-        registerComm(comm: import("../Libs/ThreadComm/Comm/Comm.js").CommBase | import("../Libs/ThreadComm/Manager/CommManager.js").CommManager): void;
+        registerComm(comm: any): void;
         dimesnion: {
             unSync(id: string | number): void;
             unSyncInThread(commName: string, id: string | number): void;
-            sync(data: import("../Meta/Data/DimensionData.types.js").DimensionData): void;
-            syncInThread(commName: string, data: import("../Meta/Data/DimensionData.types.js").DimensionData): void;
+            sync(data: any): void;
+            syncInThread(commName: string, data: any): void;
         };
         chunk: {
             unSync(dimesnion: string | number, chunkX: number, chunkY: number, chunkZ: number): void;
@@ -269,8 +268,8 @@ export declare const DVEDL: {
     worldComm: import("../Libs/ThreadComm/Comm/Comm.js").CommBase;
     parentComm: import("../Libs/ThreadComm/Comm/Comm.js").CommBase;
     dataManager: {
-        dataHanlder: import("../Meta/Interfaces/DataLoader/DataHandler.type.js").DataHandler | null;
-        setDataHandler(handler: import("../Meta/Interfaces/DataLoader/DataHandler.type.js").DataHandler): void;
+        dataHanlder: any;
+        setDataHandler(handler: any): void;
         saveChunk(x: number, y: number, z: number): void;
         loadChunk(x: number, y: number, z: number): void;
         _pos: {
@@ -299,7 +298,7 @@ export declare const DVEDL: {
         _addArrayToBuffer(regionArray: Uint32Array, currentIndex: number, array: Uint32Array): number;
         _getRegionBufferSize(totalChunks: number): number;
     };
-    syncSettings(data: EngineSettingsData): void;
+    syncSettings(data: any): void;
     reStart(): void;
     isReady(): boolean;
     $INIT(): Promise<void>;

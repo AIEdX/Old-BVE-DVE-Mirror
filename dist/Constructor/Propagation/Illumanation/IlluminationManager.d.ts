@@ -1,4 +1,3 @@
-import type { Queue } from "Global/Util/Queue.js";
 import { runRGBUpdateAt, runRGBRemove, runRGBRemoveAt, runRGBUpdate } from "./Functions/RGBLight.js";
 import { runSunLightRemove, runSunLightRemoveAt, runSunLightUpdate, runSunLightUpdateAt } from "./Functions/SunLight.js";
 import { DataTool } from "../../../Tools/Data/DataTool.js";
@@ -6,7 +5,7 @@ import { RunWorldSun } from "./Functions/WorldSun.js";
 export declare const IlluminationManager: {
     lightData: {
         SRS: number;
-        _lightValues: [s: number, r: number, g: number, b: number];
+        _lightValues: [any, number, any, number, any, number, any, number];
         getS(value: number): number;
         getR(value: number): number;
         getG(value: number): number;
@@ -22,7 +21,7 @@ export declare const IlluminationManager: {
         decodeLightFromVoxelData(voxelData: number): number;
         encodeLightIntoVoxelData(voxelData: number, encodedLight: number): number;
         setLightValues(values: number[]): number;
-        getLightValues(value: number): [s: number, r: number, g: number, b: number];
+        getLightValues(value: number): [any, number, any, number, any, number, any, number];
         isLessThanForRGBRemove(n1: number, n2: number): boolean;
         isLessThanForRGBAdd(n1: number, n2: number): boolean;
         isGreaterOrEqualThanForRGBRemove(n1: number, n2: number): boolean;
@@ -44,7 +43,7 @@ export declare const IlluminationManager: {
     runSunLightUpdate: typeof runSunLightUpdate;
     runSunLightRemove: typeof runSunLightRemove;
     runSunLightRemoveAt: typeof runSunLightRemoveAt;
-    _sunLightUpdate: Queue<number[]>;
+    _sunLightUpdate: any;
     _sunLightRemove: number[][];
     runWorldSun: typeof RunWorldSun;
     _worldSunQueue: number[][];

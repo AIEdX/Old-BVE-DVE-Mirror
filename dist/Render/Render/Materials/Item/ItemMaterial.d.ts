@@ -1,15 +1,14 @@
-import type { EngineSettingsData } from "Meta/Data/Settings/EngineSettings.types";
 import { MaterialCreateData } from "Meta/Render/Materials/Material.types.js";
 export declare const ItemMaterial: {
-    material: BABYLON.ShaderMaterial | null;
+    material: any;
     context: CanvasRenderingContext2D | null;
     time: number;
-    updateFogOptions(data: BABYLON.Vector4): void;
-    getMaterial(): BABYLON.ShaderMaterial | null;
+    updateFogOptions(data: any): void;
+    getMaterial(): any;
     setSunLightLevel(level: number): void;
     setBaseLevel(level: number): void;
-    updateMaterialSettings(settings: EngineSettingsData): void;
-    createMaterial(data: MaterialCreateData): BABYLON.ShaderMaterial;
+    updateMaterialSettings(settings: any): void;
+    createMaterial(data: MaterialCreateData): any;
     overrideMaterial(material: any): void;
     runEffects(): void;
 };

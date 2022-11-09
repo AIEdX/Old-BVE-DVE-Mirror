@@ -1,3 +1,13 @@
+{
+    ChunkTemplate;
+}
+from;
+"Meta/Constructor/ChunkTemplate.types";
+{
+    VoxelShapeAddData;
+}
+from;
+"Meta/index";
 import { ConstructEntityIndexes, ConstructorToRenderMessages, } from "../../../Common/Threads/Contracts/ConstructorToRender.js";
 import { DVEB } from "../DivineVoxelEngineBuilder.js";
 import { DVEC } from "../../DivineVoxelEngineConstructor.js";

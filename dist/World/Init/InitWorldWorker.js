@@ -1,3 +1,8 @@
+{
+    DivineVoxelEngineWorld;
+}
+from;
+"../DivineVoxelEngineWorld.js";
 import { ThreadComm } from "../../Libs/ThreadComm/ThreadComm.js";
 import { RegisterDataHooks } from "../Hooks/Data/DataHooks.js";
 import { DataSync } from "../Data/DataSync.js";

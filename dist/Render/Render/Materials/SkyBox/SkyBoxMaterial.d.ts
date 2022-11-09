@@ -1,14 +1,13 @@
-import type { EngineSettingsData } from "Meta/Data/Settings/EngineSettings.types";
 export declare const SkyBoxMaterial: {
-    material: BABYLON.ShaderMaterial | null;
+    material: any;
     context: CanvasRenderingContext2D | null;
     time: number;
-    getMaterial(): BABYLON.ShaderMaterial | null;
-    updateFogOptions(data: BABYLON.Vector4): void;
+    getMaterial(): any;
+    updateFogOptions(data: any): void;
     setSunLightLevel(level: number): void;
     setBaseLevel(level: number): void;
-    updateMaterialSettings(settings: EngineSettingsData): void;
-    createMaterial(scene: BABYLON.Scene): BABYLON.ShaderMaterial;
+    updateMaterialSettings(settings: any): void;
+    createMaterial(scene: any): any;
     overrideMaterial(material: any): void;
     runEffects(): void;
 };

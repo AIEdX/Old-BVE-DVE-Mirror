@@ -6,7 +6,7 @@ import { BrushTool } from "../../../Tools/Brush/Brush.js";
 export declare const FlowManager: {
     lightData: {
         SRS: number;
-        _lightValues: [s: number, r: number, g: number, b: number];
+        _lightValues: [any, number, any, number, any, number, any, number];
         getS(value: number): number;
         getR(value: number): number;
         getG(value: number): number;
@@ -22,7 +22,7 @@ export declare const FlowManager: {
         decodeLightFromVoxelData(voxelData: number): number;
         encodeLightIntoVoxelData(voxelData: number, encodedLight: number): number;
         setLightValues(values: number[]): number;
-        getLightValues(value: number): [s: number, r: number, g: number, b: number];
+        getLightValues(value: number): [any, number, any, number, any, number, any, number];
         isLessThanForRGBRemove(n1: number, n2: number): boolean;
         isLessThanForRGBAdd(n1: number, n2: number): boolean;
         isGreaterOrEqualThanForRGBRemove(n1: number, n2: number): boolean;
@@ -79,7 +79,7 @@ export declare const FlowManager: {
     canFlowDownardTest(x: number, y: number, z: number): boolean;
     flowDownTest(x: number, y: number, z: number): boolean;
     wait(ms: number): Promise<unknown>;
-    _lightValues: [s: number, r: number, g: number, b: number];
+    _lightValues: [any, number, any, number, any, number, any, number];
     getAbsorbLight(x: number, y: number, z: number): number;
     sunCheck(x: number, y: number, z: number): void;
 };

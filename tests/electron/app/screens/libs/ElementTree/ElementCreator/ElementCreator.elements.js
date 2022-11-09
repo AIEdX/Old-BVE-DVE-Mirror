@@ -1,3 +1,15 @@
+{
+    ElementTreeObject,
+        ElementTypes,
+    ;
+}
+from;
+"Meta/Elements/ElementTreeData.types";
+{
+    ElementCreator;
+}
+from;
+"./ElementCreator";
 const processComponent = (elmObj, elementCreator) => {
     if (!elmObj.component) {
         throw new Error('A component must have the "component" propety set.');

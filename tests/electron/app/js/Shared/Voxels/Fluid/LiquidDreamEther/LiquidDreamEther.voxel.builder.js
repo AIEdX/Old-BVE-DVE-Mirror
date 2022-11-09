@@ -1,3 +1,8 @@
+{
+    VoxelConstructorObject;
+}
+from;
+"out/Meta/index.js";
 const checkSets = {
     north: [
         [0, 1],

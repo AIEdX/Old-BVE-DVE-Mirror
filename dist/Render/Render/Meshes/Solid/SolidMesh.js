@@ -1,3 +1,10 @@
+{
+    MeshSetData,
+        VoxelMeshInterface,
+    ;
+}
+from;
+"Meta/Render/Meshes/VoxelMesh.interface";
 import { SolidMaterial } from "../../Materials/Solid/SolidMaterial.js";
 export const SolidMesh = {
     pickable: false,

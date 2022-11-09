@@ -1,12 +1,11 @@
 import { ItemShapeData } from "Meta/Constructor/ItemShape.type";
-import type { ItemConstructorObject, ItemConstructorThreadHooks } from "Meta/Data/Items/Item.types.js";
 export declare const ItemManager: {
-    itemObjects: Record<string, ItemConstructorObject>;
+    itemObjects: Record<string, any>;
     itemShapes: Record<string, ItemShapeData>;
-    getItem(id: string): ItemConstructorObject;
-    registerItem(item: ItemConstructorObject): void;
+    getItem(id: string): any;
+    registerItem(item: any): void;
     registerItemShape(shapeData: ItemShapeData): void;
     getItemShapeData(id: string): ItemShapeData;
-    runItemHookForAll(hook: ItemConstructorThreadHooks): void;
-    removeItemHookForAll(hook: ItemConstructorThreadHooks): void;
+    runItemHookForAll(hook: any): void;
+    removeItemHookForAll(hook: any): void;
 };

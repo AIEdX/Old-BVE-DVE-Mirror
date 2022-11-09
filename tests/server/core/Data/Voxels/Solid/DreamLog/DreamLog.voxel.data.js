@@ -1,3 +1,8 @@
+{
+    VoxelData;
+}
+from;
+"dve/Meta/index";
 export const DreamLogVoxelData = {
     name: "Dream Log",
     shapeId: "Box",

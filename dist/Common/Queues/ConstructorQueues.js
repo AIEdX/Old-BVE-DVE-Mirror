@@ -1,3 +1,13 @@
+{
+    BuildTasks,
+        ExplosionTasks,
+        LightUpdateTask,
+        PaintTasks,
+        UpdateTasksO,
+    ;
+}
+from;
+"Meta/Tasks/Tasks.types.js";
 //objects
 import { CCM } from "../Threads/Constructor/ConstructorComm.js";
 import { ConstructorTasks } from "../Threads/Contracts/ConstructorTasks.js";

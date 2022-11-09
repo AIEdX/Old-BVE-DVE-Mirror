@@ -1,3 +1,8 @@
+{
+    DivineVoxelEngineNexus;
+}
+from;
+"Nexus/DivineVoxelEngineNexus";
 import { ThreadComm } from "../../Libs/ThreadComm/ThreadComm.js";
 export async function InitNexusWorker(DVEN) {
     await ThreadComm.$INIT("nexus");

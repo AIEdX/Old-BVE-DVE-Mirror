@@ -1,11 +1,10 @@
-import type { EngineSettingsData } from "Meta/Data/Settings/EngineSettings.types";
 import { MaterialCreateData } from "Meta/Render/Materials/Material.types.js";
 export declare const MagmaMaterial: {
-    material: BABYLON.ShaderMaterial | null;
-    getMaterial(): BABYLON.ShaderMaterial | null;
+    material: any;
+    getMaterial(): any;
     time: number;
-    updateFogOptions(data: BABYLON.Vector4): void;
-    updateMaterialSettings(settings: EngineSettingsData): void;
-    createMaterial(data: MaterialCreateData): BABYLON.ShaderMaterial;
+    updateFogOptions(data: any): void;
+    updateMaterialSettings(settings: any): void;
+    createMaterial(data: MaterialCreateData): any;
     runEffects(): void;
 };

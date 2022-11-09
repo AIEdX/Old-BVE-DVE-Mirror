@@ -1,3 +1,8 @@
+{
+    DataHandler;
+}
+from;
+"../../../out/Meta/DataLoader/DataHandler.type";
 import { DataServer } from "./DataServer.js";
 export const DataHanlder = {
     async getRegion(x, y, z) {

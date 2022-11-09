@@ -1,3 +1,8 @@
+{
+    EngineSettingsData;
+}
+from;
+"Meta/Data/Settings/EngineSettings.types";
 import { DVER } from "../../../DivineVoxelEngineRender.js";
 export const MagmaMaterial = {
     material: null,

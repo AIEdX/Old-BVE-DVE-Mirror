@@ -1,3 +1,13 @@
+{
+    VoxelData;
+}
+from;
+"Meta/index";
+{
+    Processor;
+}
+from;
+"../Processor.js";
 const checkSets = {
     1: [
         -1, 0, 0, -1,
