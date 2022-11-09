@@ -1,10 +1,8 @@
 export class SyncedQueue {
-    id;
-    sab;
-    states = new Uint32Array();
     constructor(id, sab) {
         this.id = id;
         this.sab = sab;
+        this.states = new Uint32Array();
         this.states = new Uint32Array(sab);
     }
     addToCount(total = 1) {

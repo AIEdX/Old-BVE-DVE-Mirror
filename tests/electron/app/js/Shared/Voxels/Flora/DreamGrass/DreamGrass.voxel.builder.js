@@ -1,3 +1,8 @@
+{
+    VoxelConstructorObject;
+}
+from;
+"out/Meta/index.js";
 let uv = 0;
 export const DreamGrassVoxelBuilderThread = {
     id: "dve:dreamgrass",

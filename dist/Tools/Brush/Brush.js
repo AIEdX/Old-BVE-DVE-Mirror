@@ -1,22 +1,29 @@
+{
+    AddVoxelData;
+}
+from;
+"Meta/Data/WorldData.types";
 import { DataTool } from "../../Tools/Data/DataTool.js";
 import { DimensionsRegister } from "../../Data/Dimensions/DimensionsRegister.js";
 import { WorldPainter } from "../../Data/World/WorldPainter.js";
 import { WorldRegister } from "../../Data/World/WorldRegister.js";
 import { VoxelPaletteReader } from "../../Data/Voxel/VoxelPalette.js";
 export class BrushTool {
-    data = {
-        id: "dve:air",
-        position: [0, 0, 0],
-        state: 0,
-        shapeState: 0,
-        dimension: "main",
-        secondaryState: 0,
-        secondaryVoxelId: "dve:air",
-        level: 0,
-        levelState: 0,
-    };
-    _dt = new DataTool();
-    _raw = [];
+    constructor() {
+        this.data = {
+            id: "dve:air",
+            position: [0, 0, 0],
+            state: 0,
+            shapeState: 0,
+            dimension: "main",
+            secondaryState: 0,
+            secondaryVoxelId: "dve:air",
+            level: 0,
+            levelState: 0,
+        };
+        this._dt = new DataTool();
+        this._raw = [];
+    }
     setId(id, state = 0, shapeState = 0) {
         this.data.id = id;
         this.data.state = state;

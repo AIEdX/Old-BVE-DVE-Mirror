@@ -1,3 +1,8 @@
+{
+    VoxelConstructorObject;
+}
+from;
+"out/Meta/index.js";
 const uvs = [];
 export const DreadStonePillarVoxelBuilderThread = {
     id: "dve:dreadstonepillar",

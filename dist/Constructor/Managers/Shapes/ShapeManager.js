@@ -1,3 +1,8 @@
+{
+    VoxelShapeInterface;
+}
+from;
+"Meta/Constructor/VoxelShape.types";
 export const ShapeManager = {
     shapes: {},
     shapeMap: {},

@@ -1,3 +1,8 @@
+{
+    DivineVoxelEngineRender;
+}
+from;
+"../../../out/Render/DivineVoxelEngineRender.js";
 export function RegisterTexutres(DVER) {
     DVER.textureManager.defineDefaultTexturePath("assets/textures");
     DVER.textureManager.registerTexture("solid", {

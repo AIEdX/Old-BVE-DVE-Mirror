@@ -1,3 +1,13 @@
+{
+    SetRichVoxel;
+}
+from;
+"Meta/Data/RichWorldData.types";
+{
+    LocationData;
+}
+from;
+"Meta/Data/CommonTypes.js";
 import { ThreadComm } from "../../Libs/ThreadComm/ThreadComm.js";
 import { DVERW } from "../DivineStarVoxelEngineRichWorld.js";
 export const RichWorldTasks = {

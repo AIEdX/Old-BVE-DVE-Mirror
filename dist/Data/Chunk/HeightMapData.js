@@ -1,3 +1,13 @@
+{
+    VoxelTemplateSubstanceType;
+}
+from;
+"Meta/index";
+{
+    Position3Matrix;
+}
+from;
+"Meta/Util.types.js";
 import { PositionByte } from "../Util/PositionByte.js";
 import { ChunkReader } from "./ChunkReader.js";
 /**# Height Byte

@@ -1,3 +1,11 @@
+{
+    VoxelHooks,
+        VoxelConstructorObject,
+        VoxelData,
+    ;
+}
+from;
+"Meta/Data/Voxels/Voxel.types";
 //objects
 import { DVEC } from "../../DivineVoxelEngineConstructor.js";
 export const VoxelManager = {

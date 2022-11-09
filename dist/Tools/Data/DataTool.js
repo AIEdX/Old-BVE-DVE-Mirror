@@ -1,3 +1,10 @@
+{
+    VoxelSubstanceType,
+        VoxelTemplateSubstanceType,
+    ;
+}
+from;
+"Meta/index.js";
 import { ChunkReader } from "../../Data/Chunk/ChunkReader.js";
 import { WorldRegister } from "../../Data/World/WorldRegister.js";
 import { DimensionsRegister } from "../../Data/Dimensions/DimensionsRegister.js";
@@ -7,26 +14,27 @@ import { VoxelData } from "../../Data/Voxel/VoxelData.js";
 import { VoxelPaletteReader } from "../../Data/Voxel/VoxelPalette.js";
 import { HeightMapData } from "../../Data/Chunk/HeightMapData.js";
 export class DataTool {
-    static _dtutil = new DataTool();
-    _mode = "World";
-    data = {
-        dimension: "main",
-        raw: [0, 0],
-        x: 0,
-        y: 9,
-        z: 9,
-        id: 0,
-        baseId: 0,
-        secondaryId: 0,
-        secondaryBaseId: 0,
-    };
-    _cached = {
-        id: 0,
-        secondaryId: 0,
-        substance: "solid",
-        secondarySubstance: "solid",
-    };
-    __secondary = false;
+    constructor() {
+        this._mode = "World";
+        this.data = {
+            dimension: "main",
+            raw: [0, 0],
+            x: 0,
+            y: 9,
+            z: 9,
+            id: 0,
+            baseId: 0,
+            secondaryId: 0,
+            secondaryBaseId: 0,
+        };
+        this._cached = {
+            id: 0,
+            secondaryId: 0,
+            substance: "solid",
+            secondarySubstance: "solid",
+        };
+        this.__secondary = false;
+    }
     setDimension(dimensionId) {
         this.data.dimension = DimensionsRegister.getDimensionStringId(dimensionId);
         return this;
@@ -281,3 +289,4 @@ export class DataTool {
         return this.data.baseId == DataTool._dtutil.data.baseId;
     }
 }
+DataTool._dtutil = new DataTool();

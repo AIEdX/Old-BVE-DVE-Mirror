@@ -1,4 +1,9 @@
 console.log("hello from world screen");
+{
+    ElementTreeData;
+}
+from;
+"libs/index.js";
 import { ElementTree } from "../libs/ElementTree/ElementTree.js";
 import { VoxelSelectScreen } from "./VoxelSelect/VoxelSelectScreen.js";
 const props = { active: false };

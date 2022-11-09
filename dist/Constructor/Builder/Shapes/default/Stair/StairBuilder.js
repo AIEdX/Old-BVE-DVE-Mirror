@@ -1,4 +1,14 @@
 import { DVEB } from "../../../DivineVoxelEngineBuilder.js";
+{
+    VoxelShapeAddData;
+}
+from;
+"Meta/Constructor/VoxelShape.types";
+{
+    DirectionNames;
+}
+from;
+"Meta/Util.types.js";
 export const stairCachedPosition = {
     x: 0,
     y: 0,

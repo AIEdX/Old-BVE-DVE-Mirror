@@ -1,3 +1,8 @@
+{
+    ColliderObject, ColliderReturnData;
+}
+from;
+"Meta/Interfaces/Physics/Collider.type.js";
 const collisionReturn = [
     {
         name: "main",

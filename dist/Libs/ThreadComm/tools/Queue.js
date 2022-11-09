@@ -1,15 +1,13 @@
 class QueueNode {
-    data;
-    next;
     constructor(data) {
         this.data = data;
     }
 }
 //test
 export class Queue {
-    size = 0;
-    first;
-    last;
+    constructor() {
+        this.size = 0;
+    }
     enqueue(data) {
         const node = new QueueNode(data);
         if (this.size == 0) {

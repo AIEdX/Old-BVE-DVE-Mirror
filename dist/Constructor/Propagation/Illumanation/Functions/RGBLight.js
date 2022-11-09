@@ -1,3 +1,13 @@
+{
+    IlluminationManager;
+}
+from;
+"../IlluminationManager.js";
+{
+    Position3Matrix;
+}
+from;
+"Meta/Util.types";
 export function runRGBUpdate() {
     while (this._RGBlightUpdateQ.length != 0) {
         const node = this._RGBlightUpdateQ.shift();

@@ -1,5 +1,3 @@
-import type { DVERInitData } from "Meta/Render/DVER";
-import type { EngineSettingsData } from "Meta/Data/Settings/EngineSettings.types";
 export declare const DVER: {
     UTIL: {
         createPromiseCheck: (data: {
@@ -116,8 +114,8 @@ export declare const DVER: {
                 disableFluidShaderEffects: boolean;
             };
         };
-        getSettings(): EngineSettingsData;
-        syncSettings(data: EngineSettingsData): void;
+        getSettings(): any;
+        syncSettings(data: any): void;
         __syncWithObjects(): void;
         syncWithWorldBounds(worldBounds: {
             bounds: {
@@ -186,11 +184,11 @@ export declare const DVER: {
                 y: number;
                 z: number;
             };
-            getChunkKey(chunkPOS: import("../Meta/Util.types.js").Position3Matrix): string;
+            getChunkKey(chunkPOS: any): string;
             getChunkKeyFromPosition(x: number, y: number, z: number): string;
-            getRegionKey(regionPOS: import("../Meta/Util.types.js").Position3Matrix): string;
+            getRegionKey(regionPOS: any): string;
             getRegionKeyFromPosition(x: number, y: number, z: number): string;
-            getVoxelPositionFromChunkPosition(x: number, y: number, z: number, chunkPOS: import("../Meta/Util.types.js").Position3Matrix): {
+            getVoxelPositionFromChunkPosition(x: number, y: number, z: number, chunkPOS: any): {
                 x: number;
                 y: number;
                 z: number;
@@ -228,7 +226,7 @@ export declare const DVER: {
     };
     renderManager: {
         fogOptions: import("../Meta/Render/Render/Render.options.types.js").RenderFogOptions;
-        fogData: BABYLON.Vector4;
+        fogData: any;
         effectOptions: import("../Meta/Render/Render/Render.options.types.js").RenderEffectsOptions;
         shaderBuilder: {
             buildFloraVertexShader(uniformRegister?: string, animationFunction?: string, overlayUniformRegister?: string, overlayAnimationFunction?: string): string;
@@ -241,8 +239,8 @@ export declare const DVER: {
             buildFluidFragmentShader(): string;
             buildFloraFragmentShader(): string;
             buildMagmaFragmentShader(): string;
-            getDefaultVertexShader(voxelSubstance: import("../Meta/index.js").VoxelSubstanceType, uniformRegister?: string, animationFunction?: string, overlayUniformRegister?: string, ovlerayAnimationFunction?: string): string;
-            getDefaultFragmentShader(voxelSubstance: import("../Meta/index.js").VoxelSubstanceType): string;
+            getDefaultVertexShader(voxelSubstance: any, uniformRegister?: string, animationFunction?: string, overlayUniformRegister?: string, ovlerayAnimationFunction?: string): string;
+            getDefaultFragmentShader(voxelSubstance: any): string;
             getSkyBoxVertexShader(): string;
             getSkyBoxFragmentShader(): string;
         };
@@ -252,13 +250,13 @@ export declare const DVER: {
             imgHeight: number;
             defineTextureDimensions(width: number, height: number): void;
             setUpImageCreation(): void;
-            createMaterialTexture(name: string, scene: BABYLON.Scene, images: string[], width?: number, height?: number): Promise<BABYLON.RawTexture2DArray>;
+            createMaterialTexture(name: string, scene: any, images: string[], width?: number, height?: number): Promise<any>;
             _loadImages(imgPath: string, width: number, height: number): Promise<Uint8ClampedArray>;
             _combineImageData(totalLength: number, arrays: Uint8ClampedArray[]): Uint8ClampedArray;
             getTextureBuffer(imgPath: string, width?: number, height?: number): Promise<Uint8ClampedArray>;
         };
         animationManager: {
-            animatedMaterials: Record<import("../Meta/index.js").VoxelSubstanceType | "Item", BABYLON.ShaderMaterial>;
+            animatedMaterials: Record<import("../Meta/index.js").TextureTypes, any>;
             animCount: number;
             animations: {
                 uniformShaderId: string;
@@ -266,168 +264,168 @@ export declare const DVER: {
                 currentFrame: number;
                 currentCount: number;
                 keyCounts: number[];
-                substance: import("../Meta/index.js").VoxelSubstanceType | "Item";
+                substance: import("../Meta/index.js").TextureTypes;
             }[];
-            registerAnimations(voxelSubstanceType: import("../Meta/index.js").VoxelSubstanceType | "Item", animations: number[][], animationTimes: number[][], overlay?: boolean): {
+            registerAnimations(voxelSubstanceType: import("../Meta/index.js").TextureTypes, animations: number[][], animationTimes: number[][], overlay?: boolean): {
                 uniforms: string[];
                 uniformRegisterCode: string;
                 animationFunctionCode: string;
             };
-            registerMaterial(voxelSubstanceType: import("../Meta/index.js").VoxelSubstanceType | "Item", material: BABYLON.ShaderMaterial): void;
+            registerMaterial(voxelSubstanceType: import("../Meta/index.js").TextureTypes, material: any): void;
             startAnimations(): void;
         };
         solidMaterial: {
-            material: BABYLON.ShaderMaterial | null;
+            material: any;
             time: number;
-            getMaterial(): BABYLON.ShaderMaterial | null;
-            updateFogOptions(data: BABYLON.Vector4): void;
+            getMaterial(): any;
+            updateFogOptions(data: any): void;
             setSunLightLevel(level: number): void;
             setBaseLevel(level: number): void;
-            updateMaterialSettings(settings: EngineSettingsData): void;
-            createMaterial(data: import("../Meta/Render/Materials/Material.types.js").MaterialCreateData): BABYLON.ShaderMaterial;
+            updateMaterialSettings(settings: any): void;
+            createMaterial(data: import("../Meta/Render/Materials/Material.types.js").MaterialCreateData): any;
             overrideMaterial(material: any): void;
             runEffects(): void;
         };
         floraMaterial: {
-            material: BABYLON.ShaderMaterial | null;
+            material: any;
             doEffects: boolean;
             time: number;
-            getMaterial(): BABYLON.ShaderMaterial | null;
-            updateFogOptions(data: BABYLON.Vector4): void;
+            getMaterial(): any;
+            updateFogOptions(data: any): void;
             updateEffects(doEffects: boolean): void;
             setSunLightLevel(level: number): void;
             setBaseLevel(level: number): void;
-            updateMaterialSettings(settings: EngineSettingsData): void;
-            createMaterial(data: import("../Meta/Render/Materials/Material.types.js").MaterialCreateData): BABYLON.ShaderMaterial;
+            updateMaterialSettings(settings: any): void;
+            createMaterial(data: any): any;
             runEffects(): void;
         };
         fluidMaterial: {
-            material: BABYLON.ShaderMaterial | null;
+            material: any;
             doEffects: boolean;
             time: number;
-            getMaterial(): BABYLON.ShaderMaterial | null;
-            updateFogOptions(data: BABYLON.Vector4): void;
+            getMaterial(): any;
+            updateFogOptions(data: any): void;
             updateEffects(doEffects: boolean): void;
             setSunLightLevel(level: number): void;
             setBaseLevel(level: number): void;
-            updateMaterialSettings(settings: EngineSettingsData): void;
-            createMaterial(data: import("../Meta/Render/Materials/Material.types.js").MaterialCreateData): BABYLON.ShaderMaterial;
+            updateMaterialSettings(settings: any): void;
+            createMaterial(data: import("../Meta/Render/Materials/Material.types.js").MaterialCreateData): any;
             runEffects(): void;
         };
         magmaMaterial: {
-            material: BABYLON.ShaderMaterial | null;
-            getMaterial(): BABYLON.ShaderMaterial | null;
+            material: any;
+            getMaterial(): any;
             time: number;
-            updateFogOptions(data: BABYLON.Vector4): void;
-            updateMaterialSettings(settings: EngineSettingsData): void;
-            createMaterial(data: import("../Meta/Render/Materials/Material.types.js").MaterialCreateData): BABYLON.ShaderMaterial;
+            updateFogOptions(data: any): void;
+            updateMaterialSettings(settings: any): void;
+            createMaterial(data: import("../Meta/Render/Materials/Material.types.js").MaterialCreateData): any;
             runEffects(): void;
         };
         itemMaterial: {
-            material: BABYLON.ShaderMaterial | null;
+            material: any;
             context: CanvasRenderingContext2D | null;
             time: number;
-            updateFogOptions(data: BABYLON.Vector4): void;
-            getMaterial(): BABYLON.ShaderMaterial | null;
+            updateFogOptions(data: any): void;
+            getMaterial(): any;
             setSunLightLevel(level: number): void;
             setBaseLevel(level: number): void;
-            updateMaterialSettings(settings: EngineSettingsData): void;
-            createMaterial(data: import("../Meta/Render/Materials/Material.types.js").MaterialCreateData): BABYLON.ShaderMaterial;
+            updateMaterialSettings(settings: any): void;
+            createMaterial(data: import("../Meta/Render/Materials/Material.types.js").MaterialCreateData): any;
             overrideMaterial(material: any): void;
             runEffects(): void;
         };
         solidStandardMaterial: {
-            material: BABYLON.StandardMaterial | null;
+            material: any;
             plugin: import("./Render/Materials/Solid/Standard/SolidMaterial.bjsmp.js").SolidMaterialPlugin | null;
-            $INIT(texture: BABYLON.RawTexture2DArray, scnee: BABYLON.Scene): void;
-            getMaterial(): BABYLON.StandardMaterial;
+            $INIT(texture: any, scnee: any): void;
+            getMaterial(): any;
         };
         fluidStandardMaterial: {
-            material: BABYLON.StandardMaterial | null;
-            reflectionprobe: BABYLON.RenderTargetTexture | null;
+            material: any;
+            reflectionprobe: any;
             plugin: import("./Render/Materials/Fluid/Standard/FluidMaterial.bjsmp.js").FluidMaterialPlugin | null;
-            $INIT(texture: BABYLON.RawTexture2DArray, scene: BABYLON.Scene): void;
-            getMaterial(): BABYLON.StandardMaterial;
-            addToRenderList(mesh: BABYLON.Mesh): void;
+            $INIT(texture: any, scene: any): void;
+            getMaterial(): any;
+            addToRenderList(mesh: any): void;
         };
         skyBoxMaterial: {
-            material: BABYLON.ShaderMaterial | null;
+            material: any;
             context: CanvasRenderingContext2D | null;
             time: number;
-            getMaterial(): BABYLON.ShaderMaterial | null;
-            updateFogOptions(data: BABYLON.Vector4): void;
+            getMaterial(): any;
+            updateFogOptions(data: any): void;
             setSunLightLevel(level: number): void;
             setBaseLevel(level: number): void;
-            updateMaterialSettings(settings: EngineSettingsData): void;
-            createMaterial(scene: BABYLON.Scene): BABYLON.ShaderMaterial;
+            updateMaterialSettings(settings: any): void;
+            createMaterial(scene: any): any;
             overrideMaterial(material: any): void;
             runEffects(): void;
         };
-        solidMesh: import("../Meta/index.js").VoxelMeshInterface;
+        solidMesh: any;
         floraMesh: import("../Meta/index.js").VoxelMeshInterface;
         fluidMesh: import("../Meta/index.js").VoxelMeshInterface;
-        magmaMesh: import("../Meta/index.js").VoxelMeshInterface;
+        magmaMesh: any;
         itemMesh: {
             pickable: boolean;
             checkCollisions: boolean;
             seralize: boolean;
             clearCachedGeometry: boolean;
-            createTemplateMesh(scene: BABYLON.Scene): BABYLON.Mesh;
-            syncSettings(settings: EngineSettingsData): void;
-            _applyVertexData(mesh: BABYLON.Mesh, data: import("../Meta/Render/Meshes/ItemMesh.types.js").ItemMeshSetData): void;
-            rebuildMeshGeometory(mesh: BABYLON.Mesh, data: import("../Meta/Render/Meshes/ItemMesh.types.js").ItemMeshSetData): Promise<BABYLON.Mesh>;
-            createMesh(x: number, y: number, z: number, data: import("../Meta/Render/Meshes/ItemMesh.types.js").ItemMeshSetData): Promise<BABYLON.Mesh>;
+            createTemplateMesh(scene: any): any;
+            syncSettings(settings: import("../Meta/index.js").EngineSettingsData): void;
+            _applyVertexData(mesh: any, data: import("../Meta/Render/Meshes/ItemMesh.types.js").ItemMeshSetData): void;
+            rebuildMeshGeometory(mesh: any, data: import("../Meta/Render/Meshes/ItemMesh.types.js").ItemMeshSetData): Promise<any>;
+            createMesh(x: number, y: number, z: number, data: import("../Meta/Render/Meshes/ItemMesh.types.js").ItemMeshSetData): Promise<any>;
         };
-        scene: BABYLON.Scene | null;
+        scene: any;
         reStart(): void;
-        setScene(scene: BABYLON.Scene): void;
-        updateFogOptions(options: import("../Meta/Util.types.js").RecursivePartial<import("../Meta/Render/Render/Render.options.types.js").RenderFogOptions>): void;
+        setScene(scene: any): void;
+        updateFogOptions(options: any): void;
         _setFogData(): void;
         $INIT(): void;
-        updateShaderEffectOptions(options: import("../Meta/Util.types.js").RecursivePartial<import("../Meta/Render/Render/Render.options.types.js").RenderEffectsOptions>): void;
-        syncSettings(settings: EngineSettingsData): void;
-        getScene(): BABYLON.Scene | null;
-        createSkyBoxMaterial(scene?: BABYLON.Scene | undefined): BABYLON.ShaderMaterial | null;
+        updateShaderEffectOptions(options: any): void;
+        syncSettings(settings: any): void;
+        getScene(): any;
+        createSkyBoxMaterial(scene?: any): any;
         setSunLevel(level: number): void;
         setBaseLevel(level: number): void;
     };
     meshManager: {
-        scene: BABYLON.Scene | null;
+        scene: any;
         runningUpdate: boolean;
-        meshes: Record<import("../Meta/index.js").VoxelSubstanceType, Record<number, Record<string, BABYLON.Mesh>>>;
+        meshes: Record<any, Record<number, Record<string, any>>>;
         entityMesh: {
             pickable: boolean;
             checkCollisions: boolean;
             seralize: boolean;
             clearCachedGeometry: boolean;
-            createTemplateMesh(scene: BABYLON.Scene): BABYLON.Mesh;
-            syncSettings(settings: EngineSettingsData): void;
-            _applyVertexData(mesh: BABYLON.Mesh, data: import("../Meta/index.js").MeshSetData): void;
-            rebuildMeshGeometory(mesh: BABYLON.Mesh, data: import("../Meta/index.js").MeshSetData): Promise<BABYLON.Mesh>;
-            createMesh(x: number, y: number, z: number, data: import("../Meta/index.js").MeshSetData): Promise<BABYLON.Mesh>;
+            createTemplateMesh(scene: any): any;
+            syncSettings(settings: import("../Meta/index.js").EngineSettingsData): void;
+            _applyVertexData(mesh: any, data: any): void;
+            rebuildMeshGeometory(mesh: any, data: any): Promise<any>;
+            createMesh(x: number, y: number, z: number, data: any): Promise<any>;
         };
         itemMesh: {
             pickable: boolean;
             checkCollisions: boolean;
             seralize: boolean;
             clearCachedGeometry: boolean;
-            createTemplateMesh(scene: BABYLON.Scene): BABYLON.Mesh;
-            syncSettings(settings: EngineSettingsData): void;
-            _applyVertexData(mesh: BABYLON.Mesh, data: import("../Meta/Render/Meshes/ItemMesh.types.js").ItemMeshSetData): void;
-            rebuildMeshGeometory(mesh: BABYLON.Mesh, data: import("../Meta/Render/Meshes/ItemMesh.types.js").ItemMeshSetData): Promise<BABYLON.Mesh>;
-            createMesh(x: number, y: number, z: number, data: import("../Meta/Render/Meshes/ItemMesh.types.js").ItemMeshSetData): Promise<BABYLON.Mesh>;
+            createTemplateMesh(scene: any): any;
+            syncSettings(settings: import("../Meta/index.js").EngineSettingsData): void;
+            _applyVertexData(mesh: any, data: import("../Meta/Render/Meshes/ItemMesh.types.js").ItemMeshSetData): void;
+            rebuildMeshGeometory(mesh: any, data: import("../Meta/Render/Meshes/ItemMesh.types.js").ItemMeshSetData): Promise<any>;
+            createMesh(x: number, y: number, z: number, data: import("../Meta/Render/Meshes/ItemMesh.types.js").ItemMeshSetData): Promise<any>;
         };
-        meshMakers: Record<import("../Meta/index.js").VoxelSubstanceType, import("../Meta/index.js").VoxelMeshInterface>;
+        meshMakers: Record<any, any>;
         $INIT(): void;
-        setScene(scene: BABYLON.Scene): void;
+        setScene(scene: any): void;
         reStart(): void;
-        removeChunkMesh(dimesnion: number, type: import("../Meta/index.js").VoxelSubstanceType, chunkKey: string): void;
+        removeChunkMesh(dimesnion: number, type: any, chunkKey: string): void;
         handleItemUpdate(x: number, y: number, z: number, data: any): void;
         handleEntityUpdate(x: number, y: number, z: number, data: any): void;
-        handleChunkUpdate(dimesnion: number, type: import("../Meta/index.js").VoxelSubstanceType, chunkKey: string, data: import("../Meta/Tasks/RenderTasks.types.js").SetChunkMeshTask): void;
+        handleChunkUpdate(dimesnion: number, type: any, chunkKey: string, data: import("../Meta/Tasks/RenderTasks.types.js").SetChunkMeshTask): void;
         requestChunkBeRemoved(dimesnion: number, chunkKey: string): void;
-        _updateMesh(dimesnion: number, type: import("../Meta/index.js").VoxelSubstanceType, chunkKey: string, data: any): Promise<void>;
-        _buildNewMesh(dimesnion: number, type: import("../Meta/index.js").VoxelSubstanceType, chunkKey: string, data: any): Promise<void>;
+        _updateMesh(dimesnion: number, type: any, chunkKey: string, data: any): Promise<void>;
+        _buildNewMesh(dimesnion: number, type: any, chunkKey: string, data: any): Promise<void>;
     };
     data: {
         worldBounds: {
@@ -497,11 +495,11 @@ export declare const DVER: {
                 y: number;
                 z: number;
             };
-            getChunkKey(chunkPOS: import("../Meta/Util.types.js").Position3Matrix): string;
+            getChunkKey(chunkPOS: any): string;
             getChunkKeyFromPosition(x: number, y: number, z: number): string;
-            getRegionKey(regionPOS: import("../Meta/Util.types.js").Position3Matrix): string;
+            getRegionKey(regionPOS: any): string;
             getRegionKeyFromPosition(x: number, y: number, z: number): string;
-            getVoxelPositionFromChunkPosition(x: number, y: number, z: number, chunkPOS: import("../Meta/Util.types.js").Position3Matrix): {
+            getVoxelPositionFromChunkPosition(x: number, y: number, z: number, chunkPOS: any): {
                 x: number;
                 y: number;
                 z: number;
@@ -529,47 +527,47 @@ export declare const DVER: {
     };
     textureManager: {
         defaultTexturePath: string;
-        processedTextureData: import("../Meta/index.js").TextureProccesedData;
-        overlayProcessedTextureData: import("../Meta/index.js").TextureProccesedData;
-        textureData: import("../Meta/index.js").TextureData;
-        textureExtension: Record<import("../Meta/index.js").TextureTypes, string>;
-        textures: Record<import("../Meta/index.js").TextureTypes, import("../Meta/index.js").TextureData[]>;
-        uvTextureMap: Record<import("../Meta/index.js").TextureTypes, Record<string, number>>;
-        overylayTextures: Record<import("../Meta/index.js").TextureTypes, import("../Meta/index.js").TextureData[]>;
-        overlayUVTextureMap: Record<import("../Meta/index.js").TextureTypes, Record<string, number>>;
-        normalMapTextures: Record<import("../Meta/index.js").TextureTypes, import("../Meta/index.js").TextureData[]>;
-        noramlMapUVTexturesMap: Record<import("../Meta/index.js").TextureTypes, Record<string, number>>;
-        textureTypes: import("../Meta/index.js").TextureTypes[];
-        _processVariations(texture: import("../Meta/index.js").TextureData, texturePaths: string[], animations: Record<import("../Meta/index.js").TextureTypes, number[][]>, textureAnimatioTimes: Record<import("../Meta/index.js").TextureTypes, number[][]>, extension: string, count: number, path: string, textureType: import("../Meta/index.js").TextureTypes, overlay?: boolean, normalMap?: boolean): number;
+        processedTextureData: any;
+        overlayProcessedTextureData: any;
+        textureData: any;
+        textureExtension: Record<any, string>;
+        textures: Record<any, any[]>;
+        uvTextureMap: Record<any, Record<string, number>>;
+        overylayTextures: Record<any, any[]>;
+        overlayUVTextureMap: Record<any, Record<string, number>>;
+        normalMapTextures: Record<any, any[]>;
+        noramlMapUVTexturesMap: Record<any, Record<string, number>>;
+        textureTypes: any[];
+        _processVariations(texture: any, texturePaths: string[], animations: Record<any, number[][]>, textureAnimatioTimes: Record<any, number[][]>, extension: string, count: number, path: string, textureType: any, overlay?: boolean, normalMap?: boolean): number;
         generateTexturesData(overlay?: boolean, normalMap?: boolean): void;
         defineDefaultTexturePath(path: string): void;
-        defineDefaultTextureExtension(textureType: import("../Meta/index.js").TextureTypes, ext: string): void;
-        getTextureUV(textureType: import("../Meta/index.js").TextureTypes, textureId: string, varation?: string | undefined): number;
-        registerTexture(textureType: import("../Meta/index.js").TextureTypes, textureData: import("../Meta/index.js").TextureData): void;
+        defineDefaultTextureExtension(textureType: any, ext: string): void;
+        getTextureUV(textureType: any, textureId: string, varation?: string | undefined): number;
+        registerTexture(textureType: any, textureData: any): void;
         releaseTextureData(): void;
     };
     renderedEntites: {
-        scene: BABYLON.Scene | null;
+        scene: any;
         entityTemplate: Record<string, {
-            template: import("../Meta/index.js").RenderedEntity;
-            data: import("../Meta/index.js").RenderedEntityData;
+            template: any;
+            data: any;
         }>;
-        loaedEntities: Record<import("../Meta/index.js").EntityTypes, Record<string, import("../Meta/index.js").RenderedEntityInterface>>;
-        setScene(scene: BABYLON.Scene): void;
-        registerEntity(id: string, entityData: import("../Meta/index.js").RenderedEntityData, renderedEntity: import("../Meta/index.js").RenderedEntity): void;
+        loaedEntities: Record<any, Record<string, any>>;
+        setScene(scene: any): void;
+        registerEntity(id: string, entityData: any, renderedEntity: any): void;
         spawnEntity(entityId: string, identiferId: string, positionSBA: SharedArrayBuffer, statesSBA: SharedArrayBuffer): void;
         deSpawnEntity(entityId: string, identiferId: string): false | undefined;
     };
     tasks: {
-        setChunk: import("../Libs/ThreadComm/Tasks/Tasks.js").Task<import("../Meta/Tasks/RenderTasks.types.js").SetChunkMeshTask>;
-        removeChunk: import("../Libs/ThreadComm/Tasks/Tasks.js").Task<import("../Meta/Tasks/RenderTasks.types.js").RemoveChunkMeshTasks>;
+        setChunk: import("../Libs/ThreadComm/Tasks/Tasks.js").Task<any>;
+        removeChunk: import("../Libs/ThreadComm/Tasks/Tasks.js").Task<any>;
     };
     _handleOptions(): void;
-    syncSettingsWithWorkers(data: EngineSettingsData): void;
-    reStart(data: EngineSettingsData): Promise<void>;
-    $INIT(initData: DVERInitData): Promise<void>;
+    syncSettingsWithWorkers(data: any): void;
+    reStart(data: any): Promise<void>;
+    $INIT(initData: any): Promise<void>;
     $SCENEINIT(data: {
-        scene: BABYLON.Scene;
+        scene: any;
     }): Promise<void>;
     __createWorker(path: string): Worker;
 };

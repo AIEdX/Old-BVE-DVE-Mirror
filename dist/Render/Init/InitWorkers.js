@@ -1,3 +1,13 @@
+{
+    DivineVoxelEngineRender;
+}
+from;
+"../DivineVoxelEngineRender.js";
+{
+    DVERInitData;
+}
+from;
+"Meta/Render/DVER";
 export function InitWorkers(DVER, initData) {
     DVER.settings.syncSettings(initData);
     DVER._handleOptions();

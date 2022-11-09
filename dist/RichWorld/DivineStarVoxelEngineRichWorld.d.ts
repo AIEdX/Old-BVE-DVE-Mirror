@@ -1,4 +1,3 @@
-import type { EngineSettingsData } from "Meta/index.js";
 export declare const DVERW: {
     environment: "node" | "browser";
     __settingsHaveBeenSynced: boolean;
@@ -69,11 +68,11 @@ export declare const DVERW: {
             y: number;
             z: number;
         };
-        getChunkKey(chunkPOS: import("Meta/index.js").Position3Matrix): string;
+        getChunkKey(chunkPOS: any): string;
         getChunkKeyFromPosition(x: number, y: number, z: number): string;
-        getRegionKey(regionPOS: import("Meta/index.js").Position3Matrix): string;
+        getRegionKey(regionPOS: any): string;
         getRegionKeyFromPosition(x: number, y: number, z: number): string;
-        getVoxelPositionFromChunkPosition(x: number, y: number, z: number, chunkPOS: import("Meta/index.js").Position3Matrix): {
+        getVoxelPositionFromChunkPosition(x: number, y: number, z: number, chunkPOS: any): {
             x: number;
             y: number;
             z: number;
@@ -194,8 +193,8 @@ export declare const DVERW: {
                 disableFluidShaderEffects: boolean;
             };
         };
-        getSettings(): EngineSettingsData;
-        syncSettings(data: EngineSettingsData): void;
+        getSettings(): any;
+        syncSettings(data: any): void;
         __syncWithObjects(): void;
         syncWithWorldBounds(worldBounds: {
             bounds: {
@@ -264,11 +263,11 @@ export declare const DVERW: {
                 y: number;
                 z: number;
             };
-            getChunkKey(chunkPOS: import("Meta/index.js").Position3Matrix): string;
+            getChunkKey(chunkPOS: any): string;
             getChunkKeyFromPosition(x: number, y: number, z: number): string;
-            getRegionKey(regionPOS: import("Meta/index.js").Position3Matrix): string;
+            getRegionKey(regionPOS: any): string;
             getRegionKeyFromPosition(x: number, y: number, z: number): string;
-            getVoxelPositionFromChunkPosition(x: number, y: number, z: number, chunkPOS: import("Meta/index.js").Position3Matrix): {
+            getVoxelPositionFromChunkPosition(x: number, y: number, z: number, chunkPOS: any): {
                 x: number;
                 y: number;
                 z: number;
@@ -374,11 +373,11 @@ export declare const DVERW: {
                 y: number;
                 z: number;
             };
-            getChunkKey(chunkPOS: import("Meta/index.js").Position3Matrix): string;
+            getChunkKey(chunkPOS: any): string;
             getChunkKeyFromPosition(x: number, y: number, z: number): string;
-            getRegionKey(regionPOS: import("Meta/index.js").Position3Matrix): string;
+            getRegionKey(regionPOS: any): string;
             getRegionKeyFromPosition(x: number, y: number, z: number): string;
-            getVoxelPositionFromChunkPosition(x: number, y: number, z: number, chunkPOS: import("Meta/index.js").Position3Matrix): {
+            getVoxelPositionFromChunkPosition(x: number, y: number, z: number, chunkPOS: any): {
                 x: number;
                 y: number;
                 z: number;
@@ -403,13 +402,13 @@ export declare const DVERW: {
                 y: number;
             };
         };
-        _dimensions: import("../Meta/Data/RichWorldData.types.js").RichWorldDimensions;
+        _dimensions: Record<string, Record<string, import("../Meta/Data/RichWorldData.types.js").RichRegion>>;
         initalData: Record<string, any>;
         getRegion(x: number, y: number, z: number): false | import("../Meta/Data/RichWorldData.types.js").RichRegion;
         getDimension(dimension: string): Record<string, import("../Meta/Data/RichWorldData.types.js").RichRegion>;
-        getChunk(x: number, y: number, z: number): false | import("../Meta/Data/RichWorldData.types.js").RichChunk;
+        getChunk(x: number, y: number, z: number): false | Record<string, any>;
         addRegion(x: number, y: number, z: number): false | import("../Meta/Data/RichWorldData.types.js").RichRegion;
-        addChunk(x: number, y: number, z: number): import("../Meta/Data/RichWorldData.types.js").RichChunk;
+        addChunk(x: number, y: number, z: number): Record<string, any>;
         setData(x: number, y: number, z: number, data: any): void;
         getData<T_2>(x: number, y: number, z: number): false | T_2;
         removeData(x: number, y: number, z: number): void;
@@ -418,17 +417,17 @@ export declare const DVERW: {
         setInitalData(voxelId: string, x: number, y: number, z: number): void;
     };
     voxelManager: {
-        voxelData: Record<string, import("Meta/index.js").VoxelData>;
-        _onRegister: (data: import("Meta/index.js").VoxelData) => void;
-        getVoxelData(id: string): import("Meta/index.js").VoxelData;
-        registerVoxelData(data: import("Meta/index.js").VoxelData): void;
-        onRegister(func: (data: import("Meta/index.js").VoxelData) => void): void;
+        voxelData: Record<string, import("../Meta/index.js").VoxelData>;
+        _onRegister: (data: import("../Meta/index.js").VoxelData) => void;
+        getVoxelData(id: string): import("../Meta/index.js").VoxelData;
+        registerVoxelData(data: import("../Meta/index.js").VoxelData): void;
+        onRegister(func: (data: import("../Meta/index.js").VoxelData) => void): void;
     };
     takss: {
-        setVoxel: import("../Libs/ThreadComm/Tasks/Tasks.js").Task<import("../Meta/Data/RichWorldData.types.js").SetRichVoxel>;
-        removeVoxel: import("../Libs/ThreadComm/Tasks/Tasks.js").Task<import("../Meta/Data/CommonTypes.js").LocationData>;
+        setVoxel: import("../Libs/ThreadComm/Tasks/Tasks.js").Task<any>;
+        removeVoxel: import("../Libs/ThreadComm/Tasks/Tasks.js").Task<any>;
     };
-    syncSettings(data: EngineSettingsData): void;
+    syncSettings(data: any): void;
     reStart(): void;
     isReady(): boolean;
     $INIT(): Promise<void>;

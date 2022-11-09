@@ -1,3 +1,16 @@
+{
+    EntityTypes;
+}
+from;
+"Meta/Data/Entity/Entity.types";
+{
+    RenderedEntity,
+        RenderedEntityData,
+        RenderedEntityInterface,
+    ;
+}
+from;
+"Meta/Interfaces/Entity/RenderedEntity.types";
 export const RenderedEntitesManager = {
     scene: null,
     entityTemplate: {},

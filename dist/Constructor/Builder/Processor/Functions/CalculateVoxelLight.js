@@ -1,3 +1,10 @@
+{
+    VoxelConstructorObject,
+        VoxelSubstanceType,
+    ;
+}
+from;
+"Meta/Data/Voxels/Voxel.types";
 import { Processor } from "../Processor.js";
 import { DVEC } from "../../../DivineVoxelEngineConstructor.js";
 import { $3dCardinalNeighbors } from "../../../../Data/Constants/Util/CardinalNeighbors.js";

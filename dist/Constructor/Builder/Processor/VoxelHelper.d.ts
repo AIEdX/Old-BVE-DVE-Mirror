@@ -1,8 +1,7 @@
-import type { VoxelSubstanceType } from "Meta/index";
 export declare const VoxelHelper: {
-    substanceMap: Record<VoxelSubstanceType, number>;
+    substanceMap: Record<any, number>;
     substanceRules: Record<string, boolean>;
     ruleMap: Record<number, boolean>;
     $INIT(): void;
-    substanceRuleCheck(voxel: VoxelSubstanceType, neightborVoxel: VoxelSubstanceType): boolean;
+    substanceRuleCheck(voxel: any, neightborVoxel: any): boolean;
 };

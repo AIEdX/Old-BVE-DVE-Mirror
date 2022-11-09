@@ -1,5 +1,3 @@
-import type { VoxelShapeAddData } from "Meta/Constructor/VoxelShape.types";
-import type { DirectionNames } from "Meta/Util.types.js";
 import { Rotations } from "Meta/Constructor/Mesher.types.js";
 export declare type sideTypes = "normal" | "stair-top" | "stair-side" | "side";
 declare type StairAO = [number, number, number, number];
@@ -39,5 +37,5 @@ export declare const stairCachedPosition: {
     y: number;
     z: number;
 };
-export declare const buildStair: (data: VoxelShapeAddData, stairData: Record<DirectionNames, stairBuildData>) => void;
+export declare const buildStair: (data: any, stairData: Record<any, stairBuildData>) => void;
 export {};

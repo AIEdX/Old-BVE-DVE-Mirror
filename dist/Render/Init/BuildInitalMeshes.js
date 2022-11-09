@@ -1,3 +1,43 @@
+{
+    VoxelSubstanceType;
+}
+from;
+"Meta/index";
+{
+    MaterialCreateData;
+}
+from;
+"Meta/Render/Materials/Material.types";
+{
+    DivineVoxelEngineRender;
+}
+from;
+"Render/DivineVoxelEngineRender";
+{
+    FloraMaterial;
+}
+from;
+"Render/Render/Materials/Flora/FloraMaterial";
+{
+    FluidMaterial;
+}
+from;
+"Render/Render/Materials/Fluid/FluidMaterial";
+{
+    ItemMaterial;
+}
+from;
+"Render/Render/Materials/Item/ItemMaterial";
+{
+    MagmaMaterial;
+}
+from;
+"Render/Render/Materials/Magma/MagmaMaterial";
+{
+    SolidMaterial;
+}
+from;
+"Render/Render/Materials/Solid/SolidMaterial";
 const setUpMaterial = async (DVER, scene, substance, material) => {
     const textures = DVER.textureManager.processedTextureData.texturePaths[substance];
     const animations = DVER.textureManager.processedTextureData.textureAnimations[substance];

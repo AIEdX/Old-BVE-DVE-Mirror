@@ -1,3 +1,8 @@
+{
+    DVESInitData;
+}
+from;
+"Meta/Server/DVES";
 //inter comms
 import { ConstructorCommManager } from "./Threads/Constructor/ConstructorCommManager.js";
 import { WorldComm } from "./Threads/World/WorldComm.js";

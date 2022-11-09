@@ -1,7 +1,8 @@
 export class DataSync {
-    __onSyncFunctions = [];
-    __onUnSyncFunctions = [];
-    constructor() { }
+    constructor() {
+        this.__onSyncFunctions = [];
+        this.__onUnSyncFunctions = [];
+    }
     addOnSync(func) {
         this.__onSyncFunctions.push(func);
     }

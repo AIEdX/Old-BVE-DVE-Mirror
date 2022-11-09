@@ -1,3 +1,8 @@
+{
+    DivineVoxelEngineData;
+}
+from;
+"DataLoader/DivineVoxelEngineDataLoader";
 import { ThreadComm } from "../../Libs/ThreadComm/ThreadComm.js";
 export async function InitWorker(DVED) {
     ThreadComm.$INIT("data-loader");

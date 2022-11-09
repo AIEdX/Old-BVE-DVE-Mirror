@@ -1,3 +1,8 @@
+{
+    VoxelData;
+}
+from;
+"dve/Meta/index";
 export const LightDebugBoxVoxelData = {
     name: "Light Debug Box",
     shapeId: "Box",

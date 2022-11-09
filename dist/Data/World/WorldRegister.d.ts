@@ -1,26 +1,25 @@
-import type { ChunkData, Column, WorldDimensions, Region } from "Meta/Data/WorldData.types";
 export declare const WorldRegister: {
-    _dimensions: WorldDimensions;
+    _dimensions: any;
     _cacheOn: boolean;
-    _cache: Map<string, ChunkData>;
+    _cache: Map<string, any>;
     $INIT(): void;
     cache: {
         enable(): void;
         disable(): void;
-        _add(key: string, data: ChunkData): void;
-        _get(key: string): ChunkData | undefined;
+        _add(key: string, data: any): void;
+        _get(key: string): any;
     };
     dimensions: {
-        add(id: number | string): Map<any, any>;
-        get(id: number | string): Map<string, Region> | undefined;
+        add(id: string | number): Map<any, any>;
+        get(id: string | number): any;
     };
     region: {
-        add(dimensionId: string | number, x: number, y: number, z: number): Region;
-        get(dimensionId: string | number, x: number, y: number, z: number): false | Region;
+        add(dimensionId: string | number, x: number, y: number, z: number): any;
+        get(dimensionId: string | number, x: number, y: number, z: number): any;
     };
     column: {
-        add(dimensionId: string | number, x: number, z: number, y?: number): Column;
-        get(dimensionId: string | number, x: number, z: number, y?: number): false | Column | undefined;
+        add(dimensionId: string | number, x: number, z: number, y?: number): any;
+        get(dimensionId: string | number, x: number, z: number, y?: number): any;
         fill(dimensionId: string | number, x: number, z: number, y?: number): void;
         height: {
             getRelative(dimensionId: string | number, x: number, z: number, y?: number): number;
@@ -28,7 +27,7 @@ export declare const WorldRegister: {
         };
     };
     chunk: {
-        add(dimensionId: string | number, x: number, y: number, z: number, sab: SharedArrayBuffer): ChunkData;
-        get(dimensionId: string | number, x: number, y: number, z: number): false | ChunkData | undefined;
+        add(dimensionId: string | number, x: number, y: number, z: number, sab: SharedArrayBuffer): any;
+        get(dimensionId: string | number, x: number, y: number, z: number): any;
     };
 };

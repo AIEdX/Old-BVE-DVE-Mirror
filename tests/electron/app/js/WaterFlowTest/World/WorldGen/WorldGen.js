@@ -3,8 +3,8 @@ import { DVEW } from "../../../../out/World/DivineVoxelEngineWorld.js";
 const perlin = new PerlinNoise3d();
 perlin.noiseSeed(1234);
 const waveLength = 100;
-const xOffSet = 2_000;
-const zOffSet = -1_234;
+const xOffSet = 2000;
+const zOffSet = -1234;
 const brush = DVEW.getBrush();
 brush.setId("dve:lightdebug");
 export const WorldGen = {

@@ -1,4 +1,9 @@
 import { PlayerStatesIndexes, PlayerStatesValues, } from "../Shared/Player.data.js";
+{
+    DivineVoxelEnginePhysics;
+}
+from;
+"../../../../out/Physics/DivineVoxelEnginePhysics.js";
 export const GetNexusPlayer = async (DVEN, DVEPH) => {
     const gravity = 0.1;
     const playerPositionSAB = new SharedArrayBuffer(4 * 3);

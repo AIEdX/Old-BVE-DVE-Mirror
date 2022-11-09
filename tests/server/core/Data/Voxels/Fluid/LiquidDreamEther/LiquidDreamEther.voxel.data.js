@@ -1,3 +1,8 @@
+{
+    VoxelData;
+}
+from;
+"dve/Meta/index";
 export const LiquidDreamEtherVoxelData = {
     name: "Liquid Dream Ether",
     shapeId: "FluidSourceBlock",

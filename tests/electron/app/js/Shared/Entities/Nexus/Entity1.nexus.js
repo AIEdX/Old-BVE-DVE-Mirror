@@ -6,9 +6,6 @@ export const Entity1NexusData = {
     numStates: 4,
 };
 export class Entity1Nexus {
-    position;
-    states;
-    active;
     $INIT(DVEN, data, otherData) {
         setTimeout(() => {
             setInterval(() => {

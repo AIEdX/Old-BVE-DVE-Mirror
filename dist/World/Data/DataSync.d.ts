@@ -1,7 +1,3 @@
-import type { DimensionData } from "Meta/Data/DimensionData.types.js";
-import type { CommBase } from "Libs/ThreadComm/Comm/Comm.js";
-import type { CommManager } from "Libs/ThreadComm/Manager/CommManager.js";
-declare type DID = string | number;
 declare type CommSyncOptions = {
     chunks: boolean;
     voxelPalette: boolean;
@@ -29,22 +25,22 @@ export declare const DataSync: {
             getMap(): Record<string, number>;
         };
     };
-    comms: Record<string, CommBase | CommManager>;
+    comms: Record<string, any>;
     commOptions: Record<string, CommSyncOptions>;
     $INIT(): void;
     isReady(): boolean;
-    registerComm(comm: CommBase | CommManager): void;
+    registerComm(comm: any): void;
     dimesnion: {
         unSync(id: string | number): void;
         unSyncInThread(commName: string, id: string | number): void;
-        sync(data: DimensionData): void;
-        syncInThread(commName: string, data: DimensionData): void;
+        sync(data: any): void;
+        syncInThread(commName: string, data: any): void;
     };
     chunk: {
-        unSync(dimesnion: DID, chunkX: number, chunkY: number, chunkZ: number): void;
-        unSyncInThread(commName: string, dimension: DID, chunkX: number, chunkY: number, chunkZ: number): void;
-        sync(dimension: DID, x: number, y: number, z: number): void;
-        syncInThread(commName: string, dimesnion: DID, x: number, y: number, z: number): void;
+        unSync(dimesnion: string | number, chunkX: number, chunkY: number, chunkZ: number): void;
+        unSyncInThread(commName: string, dimension: string | number, chunkX: number, chunkY: number, chunkZ: number): void;
+        sync(dimension: string | number, x: number, y: number, z: number): void;
+        syncInThread(commName: string, dimesnion: string | number, x: number, y: number, z: number): void;
     };
     voxelData: {
         sync(): void;

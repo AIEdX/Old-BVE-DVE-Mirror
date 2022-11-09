@@ -1,15 +1,16 @@
+{
+    CommManager;
+}
+from;
+"../Manager/CommManager.js";
 import { Queue } from "../tools/Queue.js";
 export class QueueManager {
-    id;
-    onRun;
-    _manager;
-    getQueueKey;
-    __queueData = {};
     constructor(id, onRun, _manager, getQueueKey = null) {
         this.id = id;
         this.onRun = onRun;
         this._manager = _manager;
         this.getQueueKey = getQueueKey;
+        this.__queueData = {};
     }
     __getQueueKey(data) {
         if (this.getQueueKey !== null) {

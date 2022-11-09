@@ -1,4 +1,3 @@
-import type { DVESInitData } from "Meta/Server/DVES";
 import { EngineSettingsData } from "Meta/index.js";
 export declare const DVES: {
     settings: {
@@ -83,8 +82,8 @@ export declare const DVES: {
                 disableFluidShaderEffects: boolean;
             };
         };
-        getSettings(): EngineSettingsData;
-        syncSettings(data: EngineSettingsData): void;
+        getSettings(): any;
+        syncSettings(data: any): void;
         __syncWithObjects(): void;
         syncWithWorldBounds(worldBounds: {
             bounds: {
@@ -153,11 +152,11 @@ export declare const DVES: {
                 y: number;
                 z: number;
             };
-            getChunkKey(chunkPOS: import("Meta/index.js").Position3Matrix): string;
+            getChunkKey(chunkPOS: any): string;
             getChunkKeyFromPosition(x: number, y: number, z: number): string;
-            getRegionKey(regionPOS: import("Meta/index.js").Position3Matrix): string;
+            getRegionKey(regionPOS: any): string;
             getRegionKeyFromPosition(x: number, y: number, z: number): string;
-            getVoxelPositionFromChunkPosition(x: number, y: number, z: number, chunkPOS: import("Meta/index.js").Position3Matrix): {
+            getVoxelPositionFromChunkPosition(x: number, y: number, z: number, chunkPOS: any): {
                 x: number;
                 y: number;
                 z: number;
@@ -267,11 +266,11 @@ export declare const DVES: {
             y: number;
             z: number;
         };
-        getChunkKey(chunkPOS: import("Meta/index.js").Position3Matrix): string;
+        getChunkKey(chunkPOS: any): string;
         getChunkKeyFromPosition(x: number, y: number, z: number): string;
-        getRegionKey(regionPOS: import("Meta/index.js").Position3Matrix): string;
+        getRegionKey(regionPOS: any): string;
         getRegionKeyFromPosition(x: number, y: number, z: number): string;
-        getVoxelPositionFromChunkPosition(x: number, y: number, z: number, chunkPOS: import("Meta/index.js").Position3Matrix): {
+        getVoxelPositionFromChunkPosition(x: number, y: number, z: number, chunkPOS: any): {
             x: number;
             y: number;
             z: number;
@@ -310,7 +309,7 @@ export declare const DVES: {
         degtoRad(degrees: number): number;
         radToDeg(radians: number): number;
     };
-    $INIT(data: DVESInitData): Promise<void>;
+    $INIT(data: any): Promise<void>;
     __createWorker(path: string): Worker;
     syncSettingsWithWorkers(data: EngineSettingsData): void;
 };

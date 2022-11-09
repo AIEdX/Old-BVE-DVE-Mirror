@@ -1,3 +1,8 @@
+{
+    Position3Matrix;
+}
+from;
+"Meta/Util.types";
 /** # Visit All
  * ---
  * Given a starting point and an end point it will visit all voxels that are between them.

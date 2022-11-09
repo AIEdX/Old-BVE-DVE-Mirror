@@ -1,3 +1,15 @@
+{
+    TextureData;
+}
+from;
+"Meta/Render/Textures/Texture.types";
+{
+    TextureProccesedData,
+        TextureTypes,
+    ;
+}
+from;
+"Meta/Render/Textures/Texture.types";
 export const TextureManager = {
     defaultTexturePath: "",
     processedTextureData: {},

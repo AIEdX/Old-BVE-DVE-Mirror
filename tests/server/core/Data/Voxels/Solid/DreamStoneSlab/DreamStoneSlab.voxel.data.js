@@ -1,3 +1,8 @@
+{
+    VoxelData;
+}
+from;
+"dve/Meta/index";
 export const DreamStoneSlabVoxelData = {
     name: "Dream Stone Slab",
     shapeId: "HalfBox",

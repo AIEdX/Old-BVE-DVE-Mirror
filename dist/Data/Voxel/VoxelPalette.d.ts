@@ -1,8 +1,7 @@
-import { VoxelPalette, VoxelPaletteMap } from "Meta/Data/WorldData.types";
 export declare const VoxelPaletteReader: {
     _palette: Record<number, string>;
     _map: Record<string, number>;
-    setVoxelPalette(voxelPalette: VoxelPalette, voxelPaletteMap: VoxelPaletteMap): void;
+    setVoxelPalette(voxelPalette: Record<number, string>, voxelPaletteMap: Record<string, number>): void;
     id: {
         stringFromNumber(id: number): string;
         numberFromString(id: string): number;

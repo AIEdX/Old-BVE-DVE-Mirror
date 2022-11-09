@@ -1,7 +1,7 @@
 const voxelStateMasks = {
-    level: 0b00_1111,
-    levelState: 0b11_0000,
-    shapeState: 0b1111_1111_11_00_0000,
+    level: 15,
+    levelState: 48,
+    shapeState: 65472,
     extraVoxelId: 0xffff0000,
 };
 /**# Voxel Byte

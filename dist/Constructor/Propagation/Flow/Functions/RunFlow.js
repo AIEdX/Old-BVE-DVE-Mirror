@@ -1,3 +1,8 @@
+{
+    FlowManager;
+}
+from;
+"../FlowManager";
 export async function RunFlow(x, y, z) {
     const check = this.setCurrentVoxel(x, y, z);
     if (!check)

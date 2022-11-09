@@ -5,9 +5,9 @@ export declare const ItemMesh: {
     checkCollisions: boolean;
     seralize: boolean;
     clearCachedGeometry: boolean;
-    createTemplateMesh(scene: BABYLON.Scene): BABYLON.Mesh;
+    createTemplateMesh(scene: any): any;
     syncSettings(settings: EngineSettingsData): void;
-    _applyVertexData(mesh: BABYLON.Mesh, data: ItemMeshSetData): void;
-    rebuildMeshGeometory(mesh: BABYLON.Mesh, data: ItemMeshSetData): Promise<BABYLON.Mesh>;
-    createMesh(x: number, y: number, z: number, data: ItemMeshSetData): Promise<BABYLON.Mesh>;
+    _applyVertexData(mesh: any, data: ItemMeshSetData): void;
+    rebuildMeshGeometory(mesh: any, data: ItemMeshSetData): Promise<any>;
+    createMesh(x: number, y: number, z: number, data: ItemMeshSetData): Promise<any>;
 };

@@ -1,3 +1,8 @@
+{
+    DivineVoxelEngineRender;
+}
+from;
+"../../../out/Render/DivineVoxelEngineRender.js";
 export const CreateGUI = (DVER) => {
     let divFps = document.getElementById("fps");
     let position = document.getElementById("position");

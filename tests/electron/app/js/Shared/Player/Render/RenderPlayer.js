@@ -1,3 +1,8 @@
+{
+    DivineVoxelEngineRender;
+}
+from;
+"out/Render/DivineVoxelEngineRender.js";
 import { GetPlayerModel, SetUpDefaultCamera } from "../../Babylon/index.js";
 import { PlayerStatesIndexes, PlayerStatesValues, } from "../Shared/Player.data.js";
 export const GetPlayerPickCube = (DVER, camera, scene, model) => {

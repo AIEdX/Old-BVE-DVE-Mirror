@@ -1,3 +1,13 @@
+{
+    CommManagerData;
+}
+from;
+"./Meta/Manager/Manager.types.js";
+{
+    MessageFunction;
+}
+from;
+"./Meta/Util.types.js";
 //constants
 import { TCMessageHeaders, TCInternalMessages, TCDataSyncMessages, } from "./Constants/Messages.js";
 //classes

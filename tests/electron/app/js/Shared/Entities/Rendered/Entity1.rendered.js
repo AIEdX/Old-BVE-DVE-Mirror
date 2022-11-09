@@ -3,8 +3,6 @@ export const Entity1RenderedData = {
     dependencies: {},
 };
 export class Entity1Rendered {
-    position;
-    states;
     $INIT(data) {
     }
     onSpawn(scene) {
