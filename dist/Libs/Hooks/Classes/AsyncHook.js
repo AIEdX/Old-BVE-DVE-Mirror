@@ -1,7 +1,5 @@
 export class AsyncHook {
-    constructor() {
-        this._onRun = [];
-    }
+    _onRun = [];
     async run(data) {
         let returnData = false;
         for (const run of this._onRun) {

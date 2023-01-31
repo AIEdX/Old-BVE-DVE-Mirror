@@ -1,25 +1,12 @@
-{
-    ElementTreeInterface;
-}
-from;
-"Meta/ElementTree.interface.js";
-{
-    ElementTreeData,
-        ElementTreeObject,
-        InputValueTypes,
-    ;
-}
-from;
-"Meta/Elements/ElementTreeData.types";
 import { attributeSetFunction } from "./ElementCreator.attributes.js";
 import { elementCreateFunctions } from "./ElementCreator.elements.js";
 import { elementEventFunctions } from "./ElementCreator.events.js";
 export class ElementCreator {
-    constructor() {
-        this.attributeSetFunction = attributeSetFunction;
-        this.elementCreateFunctions = elementCreateFunctions;
-        this.elemntEventFunctions = elementEventFunctions;
-    }
+    attributeSetFunction = attributeSetFunction;
+    elementCreateFunctions = elementCreateFunctions;
+    elemntEventFunctions = elementEventFunctions;
+    elementTree;
+    constructor() { }
     _traverseElementTree(tree, parentElm) {
         for (const elmObj of tree) {
             if (Array.isArray(elmObj)) {

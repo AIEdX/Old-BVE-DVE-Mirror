@@ -1,3 +1,4 @@
+import type { CommManagerData } from "./Meta/Manager/Manager.types.js";
 import { Task } from "./Tasks/Tasks.js";
 import { CommManager } from "./Manager/CommManager.js";
 import { CommBase } from "./Comm/Comm.js";
@@ -20,7 +21,7 @@ export declare const ThreadComm: {
     getSyncedQueue(threadId: string, queueId: string): SyncedQueue | undefined;
     addComm(comm: CommBase): void;
     createComm<T>(name: string, mergeObject?: T): T & CommBase;
-    createCommManager(data: any): CommManager;
+    createCommManager(data: CommManagerData): CommManager;
     getComm(id: string): CommBase;
     getCommManager(id: string): CommManager;
     __throwError(message: string): never;

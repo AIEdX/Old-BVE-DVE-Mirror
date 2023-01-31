@@ -1,11 +1,11 @@
 import { VoxelSubstanceType } from "Meta/index";
-export declare type TextureTypes = VoxelSubstanceType | "Item";
-export declare type TextureProccesedData = {
+export type TextureTypes = VoxelSubstanceType | "Item";
+export type TextureProccesedData = {
     textureAnimations: Record<TextureTypes, number[][]>;
     textureAnimationTimes: Record<TextureTypes, number[][]>;
     texturePaths: Record<TextureTypes, string[]>;
 };
-export declare type TextureAnimationData = {
+export type TextureAnimationData = {
     /**# Frames
      * If the texture has animation frames the number of frames must be set to the number
      * texture animatoin images. This number must be greater than 1.
@@ -36,7 +36,7 @@ export declare type TextureAnimationData = {
      */
     animKeyFrameTimes?: number[];
 };
-export declare type TextureData = {
+export type TextureData = {
     /**# Name
      * The name of the texutre.
      */

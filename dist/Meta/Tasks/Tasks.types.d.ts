@@ -1,12 +1,12 @@
-export declare type LightUpdateTask = [number, number, number];
-export declare type WorldSunTask = [
+export type LightUpdateTask = [number, number, number];
+export type WorldSunTask = [
     dimension: string,
     x: number,
     z: number,
     y: number,
     originThread: string
 ];
-export declare type UpdateTasksO = [
+export type UpdateTasksO = [
     dimension: string,
     x: number,
     y: number,
@@ -14,7 +14,7 @@ export declare type UpdateTasksO = [
     buildQueue: string,
     originThread: string
 ];
-export declare type PaintTasks = [
+export type PaintTasks = [
     dimension: string,
     x: number,
     y: number,
@@ -23,22 +23,22 @@ export declare type PaintTasks = [
     buildQueue: string,
     originThread: string
 ];
-export declare type ReBuildTasks = [
+export type ReBuildTasks = [
     dimension: string | number,
     x: number,
     y: number,
     z: number,
     buildQueue: string
 ];
-export declare type RunRebuildTasks = [buildQueue: string];
-export declare type BuildTasks = [
+export type RunRebuildTasks = [buildQueue: string];
+export type BuildTasks = [
     dimension: string | number,
     x: number,
     y: number,
     z: number,
     LOD: number
 ];
-export declare type ExplosionTasks = [
+export type ExplosionTasks = [
     dimension: string,
     x: number,
     y: number,

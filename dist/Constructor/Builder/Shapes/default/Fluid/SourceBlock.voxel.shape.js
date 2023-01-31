@@ -1,11 +1,4 @@
 import { DVEB } from "../../../DivineVoxelEngineBuilder.js";
-{
-    VoxelShapeAddData,
-        VoxelShapeInterface,
-    ;
-}
-from;
-"Meta/Constructor/VoxelShape.types";
 const shapeDimensions1 = {
     width: 0.5,
     depth: 0.5,

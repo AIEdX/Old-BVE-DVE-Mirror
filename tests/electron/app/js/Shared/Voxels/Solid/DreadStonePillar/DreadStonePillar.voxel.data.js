@@ -1,8 +1,3 @@
-{
-    VoxelData;
-}
-from;
-"out/Meta/index";
 export const DreadStonePillarVoxelData = {
     name: "Dread Stone Pillar",
     shapeId: "Box",

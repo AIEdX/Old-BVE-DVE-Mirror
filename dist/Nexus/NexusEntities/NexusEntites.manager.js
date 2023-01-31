@@ -1,16 +1,3 @@
-{
-    EntityTypes;
-}
-from;
-"Meta/Data/Entity/Entity.types";
-{
-    NexusEntity,
-        NexusEntityData,
-        NexusEntityInterface,
-    ;
-}
-from;
-"Meta/Interfaces/Entity/NexusEntity.types";
 import { DVEN } from "../DivineVoxelEngineNexus.js";
 export const NexusEntites = {
     entityTemplate: {},

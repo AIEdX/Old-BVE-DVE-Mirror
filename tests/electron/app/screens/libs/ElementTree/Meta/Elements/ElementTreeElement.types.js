@@ -1,5 +1,1 @@
-{
-    ElementTreeData;
-}
-from;
-"./ElementTreeData.types";
+export {};

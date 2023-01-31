@@ -1,8 +1,3 @@
-{
-    VoxelConstructorObject;
-}
-from;
-"out/Meta/index.js";
 const uvs = [];
 export const DreamStonePillarVoxelBuilderThread = {
     id: "dve:dreamstonepillar",

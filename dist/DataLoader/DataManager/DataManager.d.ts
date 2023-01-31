@@ -1,6 +1,7 @@
+import type { DataHandler } from "Meta/Interfaces/DataLoader/DataHandler.type";
 export declare const DataManager: {
-    dataHanlder: any;
-    setDataHandler(handler: any): void;
+    dataHanlder: DataHandler | null;
+    setDataHandler(handler: DataHandler): void;
     saveChunk(x: number, y: number, z: number): void;
     loadChunk(x: number, y: number, z: number): void;
     _pos: {

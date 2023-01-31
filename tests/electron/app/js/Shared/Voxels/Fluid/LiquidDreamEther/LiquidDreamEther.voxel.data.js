@@ -1,8 +1,3 @@
-{
-    VoxelData;
-}
-from;
-"out/Meta/index";
 export const LiquidDreamEtherVoxelData = {
     name: "Liquid Dream Ether",
     shapeId: "FluidSourceBlock",

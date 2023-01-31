@@ -3,8 +3,8 @@ import { PerlinNoise3d } from "../../Shared/Noise/Perlin.js";
 const perlin = new PerlinNoise3d();
 perlin.noiseSeed(666);
 const waveLength = 100;
-const xOffSet = 1000;
-const zOffSet = 1000;
+const xOffSet = 1_000;
+const zOffSet = 1_000;
 const brush = DVEW.getBrush();
 const tasks = DVEW.getTasksManager();
 export const WorldGen = {

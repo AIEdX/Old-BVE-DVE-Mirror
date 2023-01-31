@@ -1,8 +1,3 @@
-{
-    ColliderObject;
-}
-from;
-"Meta/Interfaces/Physics/Collider.type";
 export const ColliderManager = {
     colliders: {},
     registerCollider(collider) {

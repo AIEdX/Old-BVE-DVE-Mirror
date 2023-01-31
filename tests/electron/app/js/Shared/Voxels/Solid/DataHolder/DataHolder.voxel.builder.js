@@ -1,8 +1,3 @@
-{
-    VoxelConstructorObject;
-}
-from;
-"out/Meta/index.js";
 let frontUV = 0;
 let sideUV = 0;
 export const DataHolderVoxelBuilderThread = {

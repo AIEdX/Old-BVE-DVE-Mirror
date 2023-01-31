@@ -4,8 +4,8 @@ const perlin2 = new PerlinNoise3d();
 perlin.noiseSeed(12341234);
 perlin2.noiseSeed(989989989);
 const waveLength = 50;
-const xOffSet = 1000;
-const zOffSet = 1000;
+const xOffSet = 1_000;
+const zOffSet = 1_000;
 export const WorldGen = {
     chunkDepth: 16,
     chunkWidth: 16,

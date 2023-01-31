@@ -1,5 +1,5 @@
 /// <reference types="babylonjs" />
-export declare type RenderFogOptions = {
+export type RenderFogOptions = {
     mode: "exponential" | "volumetric" | "animated-volumetric";
     color: BABYLON.Color3;
     density: number;
@@ -7,7 +7,7 @@ export declare type RenderFogOptions = {
         heightFactor: number;
     };
 };
-export declare type RenderEffectsOptions = {
+export type RenderEffectsOptions = {
     floraEffects: boolean;
     fluidEffects: boolean;
 };

@@ -1,8 +1,3 @@
-{
-    VoxelConstructorObject;
-}
-from;
-"out/Meta/index.js";
 let uv = 0;
 export const DreamVineVoxelBuilderThread = {
     id: "dve:dreamvine",

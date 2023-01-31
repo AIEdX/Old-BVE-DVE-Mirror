@@ -1,4 +1,4 @@
-import { RichRegion } from "Meta/Data/RichWorldData.types.js";
+import { RichChunk, RichRegion, RichWorldDimensions } from "Meta/Data/RichWorldData.types.js";
 export declare const RichData: {
     worldBounds: {
         bounds: {
@@ -67,11 +67,11 @@ export declare const RichData: {
             y: number;
             z: number;
         };
-        getChunkKey(chunkPOS: any): string;
+        getChunkKey(chunkPOS: import("../../Meta/Util.types.js").Position3Matrix): string;
         getChunkKeyFromPosition(x: number, y: number, z: number): string;
-        getRegionKey(regionPOS: any): string;
+        getRegionKey(regionPOS: import("../../Meta/Util.types.js").Position3Matrix): string;
         getRegionKeyFromPosition(x: number, y: number, z: number): string;
-        getVoxelPositionFromChunkPosition(x: number, y: number, z: number, chunkPOS: any): {
+        getVoxelPositionFromChunkPosition(x: number, y: number, z: number, chunkPOS: import("../../Meta/Util.types.js").Position3Matrix): {
             x: number;
             y: number;
             z: number;
@@ -96,13 +96,13 @@ export declare const RichData: {
             y: number;
         };
     };
-    _dimensions: Record<string, Record<string, RichRegion>>;
+    _dimensions: RichWorldDimensions;
     initalData: Record<string, any>;
     getRegion(x: number, y: number, z: number): false | RichRegion;
     getDimension(dimension: string): Record<string, RichRegion>;
-    getChunk(x: number, y: number, z: number): false | Record<string, any>;
+    getChunk(x: number, y: number, z: number): false | RichChunk;
     addRegion(x: number, y: number, z: number): false | RichRegion;
-    addChunk(x: number, y: number, z: number): Record<string, any>;
+    addChunk(x: number, y: number, z: number): RichChunk;
     setData(x: number, y: number, z: number, data: any): void;
     getData<T>(x: number, y: number, z: number): false | T;
     removeData(x: number, y: number, z: number): void;

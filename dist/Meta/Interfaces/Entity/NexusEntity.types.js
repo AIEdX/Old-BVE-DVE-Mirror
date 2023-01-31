@@ -1,10 +1,1 @@
-{
-    EntityTypes;
-}
-from;
-"../../Data/Entity/Entity.types";
-{
-    DivineVoxelEngineNexus;
-}
-from;
-"../../../Nexus/DivineVoxelEngineNexus.js";
+export {};

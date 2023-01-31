@@ -1,8 +1,3 @@
-{
-    CullFaceOverride;
-}
-from;
-"Meta/Constructor/OverRide.types";
 const eastWestSides = {
     0: true,
     2: true,

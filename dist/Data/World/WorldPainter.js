@@ -1,8 +1,3 @@
-{
-    AddVoxelData, ChunkData;
-}
-from;
-"../../Meta/Data/WorldData.types";
 import { WorldRegister } from "./WorldRegister.js";
 import { DataHooks } from "../DataHooks.js";
 import { DimensionsRegister } from "../Dimensions/DimensionsRegister.js";

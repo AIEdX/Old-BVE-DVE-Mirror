@@ -1,8 +1,3 @@
-{
-    VoxelData;
-}
-from;
-"out/Meta/index";
 export const DebugBoxVoxelData = {
     name: "Debug Box",
     shapeId: "Box",
@@ -11,7 +6,7 @@ export const DebugBoxVoxelData = {
     material: "stone",
     hardnress: 1000,
     lightSource: true,
-    lightValue: 65520,
+    lightValue: 0b1111_1111_1111_0000,
     physics: {
         collider: "Box",
         checkCollisions: true,

@@ -1,6 +1,6 @@
 import { DirectionNames } from "Meta/Util.types";
 import { Rotations } from "./Mesher.types";
-export declare type CustomShapeType = {
+export type CustomShapeType = {
     id: string;
     causeAO: boolean;
     alwaysVisible: boolean;

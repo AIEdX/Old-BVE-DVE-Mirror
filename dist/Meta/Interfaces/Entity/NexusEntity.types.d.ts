@@ -1,6 +1,6 @@
 import type { EntityTypes } from "../../Data/Entity/Entity.types";
 import type { DivineVoxelEngineNexus } from "../../../Nexus/DivineVoxelEngineNexus.js";
-export declare type NexusEntityData = {
+export type NexusEntityData = {
     type: EntityTypes;
     boundingBox: {
         width: number;
@@ -18,4 +18,4 @@ export interface NexusEntityInterface {
     onDeSpawn(): void;
     update(): void;
 }
-export declare type NexusEntity = new () => NexusEntityInterface;
+export type NexusEntity = new () => NexusEntityInterface;

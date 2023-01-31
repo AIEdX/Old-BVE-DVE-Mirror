@@ -1,6 +1,6 @@
 /// <reference types="babylonjs" />
 import type { EntityTypes } from "../../Data/Entity/Entity.types";
-export declare type RenderedEntityData = {
+export type RenderedEntityData = {
     type: EntityTypes;
     dependencies: any;
 };
@@ -12,4 +12,4 @@ export interface RenderedEntityInterface {
     onDeSpawn(): void;
     update(): void;
 }
-export declare type RenderedEntity = new () => RenderedEntityInterface;
+export type RenderedEntity = new () => RenderedEntityInterface;

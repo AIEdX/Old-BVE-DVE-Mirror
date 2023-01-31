@@ -1,5 +1,1 @@
-{
-    DVEB;
-}
-from;
-"Constructor/Builder/DivineVoxelEngineBuilder";
+export {};

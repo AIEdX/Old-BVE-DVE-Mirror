@@ -1,13 +1,3 @@
-{
-    DVESInitData;
-}
-from;
-"Meta/Server/DVES";
-{
-    DivineVoxelEngineServer;
-}
-from;
-"Server/DivineVoxelEngineServer";
 export function InitWorkers(DVES, initData) {
     DVES.settings.syncSettings(initData);
     if (typeof initData.worldWorker == "string") {

@@ -1,3 +1,4 @@
+import type { EngineSettingsData } from "Meta/index.js";
 export declare const DVEFX: {
     environment: "node" | "browser";
     __settingsHaveBeenSynced: boolean;
@@ -97,8 +98,8 @@ export declare const DVEFX: {
                 disableFluidShaderEffects: boolean;
             };
         };
-        getSettings(): any;
-        syncSettings(data: any): void;
+        getSettings(): EngineSettingsData;
+        syncSettings(data: EngineSettingsData): void;
         __syncWithObjects(): void;
         syncWithWorldBounds(worldBounds: {
             bounds: {
@@ -167,11 +168,11 @@ export declare const DVEFX: {
                 y: number;
                 z: number;
             };
-            getChunkKey(chunkPOS: any): string;
+            getChunkKey(chunkPOS: import("Meta/index.js").Position3Matrix): string;
             getChunkKeyFromPosition(x: number, y: number, z: number): string;
-            getRegionKey(regionPOS: any): string;
+            getRegionKey(regionPOS: import("Meta/index.js").Position3Matrix): string;
             getRegionKeyFromPosition(x: number, y: number, z: number): string;
-            getVoxelPositionFromChunkPosition(x: number, y: number, z: number, chunkPOS: any): {
+            getVoxelPositionFromChunkPosition(x: number, y: number, z: number, chunkPOS: import("Meta/index.js").Position3Matrix): {
                 x: number;
                 y: number;
                 z: number;
@@ -208,20 +209,20 @@ export declare const DVEFX: {
         doFlow(): boolean;
     };
     dataSyncNode: {
-        chunk: import("../Libs/ThreadComm/Data/DataSync.js").DataSync<any, any>;
-        voxelPalette: import("../Libs/ThreadComm/Data/DataSync.js").DataSync<any, any>;
-        voxelData: import("../Libs/ThreadComm/Data/DataSync.js").DataSync<any, any>;
-        dimension: import("../Libs/ThreadComm/Data/DataSync.js").DataSync<any, void>;
+        chunk: import("../Libs/ThreadComm/Data/DataSync.js").DataSync<import("../Meta/Data/DataSync.types.js").ChunkSyncData, import("../Meta/Data/DataSync.types.js").ChunkUnSyncData>;
+        voxelPalette: import("../Libs/ThreadComm/Data/DataSync.js").DataSync<import("../Meta/Data/DataSync.types.js").VoxelPaletteSyncData, any>;
+        voxelData: import("../Libs/ThreadComm/Data/DataSync.js").DataSync<import("../Meta/Data/DataSync.types.js").VoxelDataSync, any>;
+        dimension: import("../Libs/ThreadComm/Data/DataSync.js").DataSync<import("../Meta/Data/DimensionData.types.js").DimensionData, void>;
     };
     data: {
         dimensions: {
             _count: number;
             dimensionRecord: Record<string, number>;
             dimensionMap: Record<number, string>;
-            __defaultDimensionOptions: any;
-            _dimensions: Record<string, any>;
-            registerDimension(id: string, option: any): void;
-            getDimension(id: string | number): any;
+            __defaultDimensionOptions: import("../Meta/Data/DimensionData.types.js").DimensionOptions;
+            _dimensions: Record<string, import("../Meta/Data/DimensionData.types.js").DimensionData>;
+            registerDimension(id: string, option: import("../Meta/Data/DimensionData.types.js").DimensionOptions): void;
+            getDimension(id: string | number): import("../Meta/Data/DimensionData.types.js").DimensionData;
             getDimensionStringId(id: string | number): string;
             getDimensionNumericId(id: string | number): number;
         };
@@ -249,9 +250,9 @@ export declare const DVEFX: {
                 lightValue: number;
                 isRich: number;
             };
-            substanceRecord: Record<number, import("../Meta/index.js").VoxelSubstanceType>;
+            substanceRecord: Record<number, import("Meta/index.js").VoxelSubstanceType>;
             voxelData: {
-                substance: import("../Meta/index.js").VoxelSubstanceType;
+                substance: import("Meta/index.js").VoxelSubstanceType;
                 shapeId: number;
                 hardness: number;
                 material: number;
@@ -265,7 +266,7 @@ export declare const DVEFX: {
             voxelMap: Uint16Array;
             syncData(voxelBuffer: SharedArrayBuffer, voxelMapBuffer: SharedArrayBuffer): void;
             getVoxelData(id: number): {
-                substance: import("../Meta/index.js").VoxelSubstanceType;
+                substance: import("Meta/index.js").VoxelSubstanceType;
                 shapeId: number;
                 hardness: number;
                 material: number;
@@ -276,7 +277,7 @@ export declare const DVEFX: {
                 isRich: number;
             };
             getSubstance(id: number): number;
-            getTrueSubstance(id: number): import("../Meta/index.js").VoxelSubstanceType;
+            getTrueSubstance(id: number): import("Meta/index.js").VoxelSubstanceType;
             getShapeId(id: number): number;
             getHardness(id: number): number;
             getCheckCollisions(id: number): number;
@@ -292,34 +293,34 @@ export declare const DVEFX: {
             };
             paint: {
                 _dt: import("../Tools/Data/DataTool.js").DataTool;
-                voxel(data: any, update?: boolean): void;
-                voxelAsync(data: any): Promise<void>;
-                __paint(dimension: number, data: any, update?: boolean): false | undefined;
+                voxel(data: import("../Meta/Data/WorldData.types.js").AddVoxelData, update?: boolean): void;
+                voxelAsync(data: import("../Meta/Data/WorldData.types.js").AddVoxelData): Promise<void>;
+                __paint(dimension: number, data: import("../Meta/Data/WorldData.types.js").AddVoxelData, update?: boolean): false | undefined;
                 erease(dimensionId: string | number, x: number, y: number, z: number): void;
             };
         };
         worldRegister: {
-            _dimensions: any;
+            _dimensions: import("../Meta/Data/WorldData.types.js").WorldDimensions;
             _cacheOn: boolean;
-            _cache: Map<string, any>;
+            _cache: Map<string, import("../Meta/Data/WorldData.types.js").ChunkData>;
             $INIT(): void;
             cache: {
                 enable(): void;
                 disable(): void;
-                _add(key: string, data: any): void;
-                _get(key: string): any;
+                _add(key: string, data: import("../Meta/Data/WorldData.types.js").ChunkData): void;
+                _get(key: string): import("../Meta/Data/WorldData.types.js").ChunkData | undefined;
             };
             dimensions: {
                 add(id: string | number): Map<any, any>;
-                get(id: string | number): any;
+                get(id: string | number): Map<string, import("../Meta/Data/WorldData.types.js").Region> | undefined;
             };
             region: {
-                add(dimensionId: string | number, x: number, y: number, z: number): any;
-                get(dimensionId: string | number, x: number, y: number, z: number): any;
+                add(dimensionId: string | number, x: number, y: number, z: number): import("../Meta/Data/WorldData.types.js").Region;
+                get(dimensionId: string | number, x: number, y: number, z: number): false | import("../Meta/Data/WorldData.types.js").Region;
             };
             column: {
-                add(dimensionId: string | number, x: number, z: number, y?: number): any;
-                get(dimensionId: string | number, x: number, z: number, y?: number): any;
+                add(dimensionId: string | number, x: number, z: number, y?: number): import("../Meta/Data/WorldData.types.js").Column;
+                get(dimensionId: string | number, x: number, z: number, y?: number): false | import("../Meta/Data/WorldData.types.js").Column | undefined;
                 fill(dimensionId: string | number, x: number, z: number, y?: number): void;
                 height: {
                     getRelative(dimensionId: string | number, x: number, z: number, y?: number): number;
@@ -327,8 +328,8 @@ export declare const DVEFX: {
                 };
             };
             chunk: {
-                add(dimensionId: string | number, x: number, y: number, z: number, sab: SharedArrayBuffer): any;
-                get(dimensionId: string | number, x: number, y: number, z: number): any;
+                add(dimensionId: string | number, x: number, y: number, z: number, sab: SharedArrayBuffer): import("../Meta/Data/WorldData.types.js").ChunkData;
+                get(dimensionId: string | number, x: number, y: number, z: number): false | import("../Meta/Data/WorldData.types.js").ChunkData | undefined;
             };
         };
         worldColumn: {};
@@ -399,11 +400,11 @@ export declare const DVEFX: {
                 y: number;
                 z: number;
             };
-            getChunkKey(chunkPOS: any): string;
+            getChunkKey(chunkPOS: import("Meta/index.js").Position3Matrix): string;
             getChunkKeyFromPosition(x: number, y: number, z: number): string;
-            getRegionKey(regionPOS: any): string;
+            getRegionKey(regionPOS: import("Meta/index.js").Position3Matrix): string;
             getRegionKeyFromPosition(x: number, y: number, z: number): string;
-            getVoxelPositionFromChunkPosition(x: number, y: number, z: number, chunkPOS: any): {
+            getVoxelPositionFromChunkPosition(x: number, y: number, z: number, chunkPOS: import("Meta/index.js").Position3Matrix): {
                 x: number;
                 y: number;
                 z: number;
@@ -430,8 +431,8 @@ export declare const DVEFX: {
         };
         register: {
             voxels: {
-                substanceMap: Record<import("../Meta/index.js").VoxelSubstanceType, number>;
-                substanceRecord: Record<number, import("../Meta/index.js").VoxelSubstanceType>;
+                substanceMap: Record<import("Meta/index.js").VoxelSubstanceType, number>;
+                substanceRecord: Record<number, import("Meta/index.js").VoxelSubstanceType>;
                 byteLengths: {
                     substance: number;
                     shapeId: number;
@@ -496,7 +497,7 @@ export declare const DVEFX: {
                     y: number;
                     z: number;
                 };
-                setChunkPosition(chunk: DataView, position: import("../Meta/Util.types.js").Position3Matrix): void;
+                setChunkPosition(chunk: DataView, position: import("Meta/index.js").Position3Matrix): void;
                 getVoxelChunkDataIndex(x: number, y: number, z: number, secondary?: boolean): number;
                 hmBounds: {
                     x: number;
@@ -507,8 +508,8 @@ export declare const DVEFX: {
                 getHeightMapIndex(x: number, y: number, z: number): number;
                 getVoxelData(chunkData: import("../Meta/Data/WorldData.types.js").ChunkData, x: number, y: number, z: number, secondary?: boolean): number;
                 setVoxelData(chunkData: import("../Meta/Data/WorldData.types.js").ChunkData, x: number, y: number, z: number, data: number, secondary?: boolean): number;
-                getVoxelDataUseObj(chunkData: import("../Meta/Data/WorldData.types.js").ChunkData, position: import("../Meta/Util.types.js").Position3Matrix, secondary?: boolean): number;
-                setVoxelDataUseObj(chunkData: import("../Meta/Data/WorldData.types.js").ChunkData, position: import("../Meta/Util.types.js").Position3Matrix, data: number, secondary?: boolean): number;
+                getVoxelDataUseObj(chunkData: import("../Meta/Data/WorldData.types.js").ChunkData, position: import("Meta/index.js").Position3Matrix, secondary?: boolean): number;
+                setVoxelDataUseObj(chunkData: import("../Meta/Data/WorldData.types.js").ChunkData, position: import("Meta/index.js").Position3Matrix, data: number, secondary?: boolean): number;
                 getHeightMapData(chunkData: DataView, x: number, y: number, z: number): number;
                 setHeightMapData(chunkData: DataView, x: number, y: number, z: number, data: number): void;
                 getChunkMinData(chunkData: DataView): number;
@@ -517,27 +518,27 @@ export declare const DVEFX: {
                 setChunkMaxData(chunkData: DataView, data: number): void;
             };
             heightMap: {
-                _getHeightMapData: Record<any, (byteData: number) => number>;
-                _setHeightMapData: Record<any, (height: number, byteData: number) => number>;
-                _markSubstanceAsNotExposed: Record<any, (data: number) => number>;
-                _markSubstanceAsExposed: Record<any, (data: number) => number>;
-                _isSubstanceExposed: Record<any, (data: number) => boolean>;
+                _getHeightMapData: Record<import("Meta/index.js").VoxelTemplateSubstanceType, (byteData: number) => number>;
+                _setHeightMapData: Record<import("Meta/index.js").VoxelTemplateSubstanceType, (height: number, byteData: number) => number>;
+                _markSubstanceAsNotExposed: Record<import("Meta/index.js").VoxelTemplateSubstanceType, (data: number) => number>;
+                _markSubstanceAsExposed: Record<import("Meta/index.js").VoxelTemplateSubstanceType, (data: number) => number>;
+                _isSubstanceExposed: Record<import("Meta/index.js").VoxelTemplateSubstanceType, (data: number) => boolean>;
                 getStartingHeightMapValue(): number;
                 initalizeChunk(chunkData: DataView): void;
-                updateChunkMinMax(voxelPOS: any, chunkData: DataView): void;
+                updateChunkMinMax(voxelPOS: import("Meta/index.js").Position3Matrix, chunkData: DataView): void;
                 getChunkMin(chunkData: DataView): number;
                 getChunkMax(chunkData: DataView): number;
-                calculateHeightRemoveDataForSubstance(height: number, substance: any, x: number, z: number, heightMap: DataView): boolean | undefined;
-                calculateHeightAddDataForSubstance(height: number, substance: any, x: number, z: number, chunk: DataView): void;
+                calculateHeightRemoveDataForSubstance(height: number, substance: import("Meta/index.js").VoxelTemplateSubstanceType, x: number, z: number, heightMap: DataView): boolean | undefined;
+                calculateHeightAddDataForSubstance(height: number, substance: import("Meta/index.js").VoxelTemplateSubstanceType, x: number, z: number, chunk: DataView): void;
                 getLowestExposedVoxel(x: number, z: number, chunk: DataView): number;
                 getHighestExposedVoxel(x: number, z: number, chunk: DataView): number;
-                isSubstanceExposed(substance: any, x: number, z: number, chunk: DataView): boolean;
-                markSubstanceAsExposed(substance: any, x: number, z: number, chunk: DataView): void;
-                markSubstanceAsNotExposed(substance: any, x: number, z: number, chunk: DataView): void;
-                setMinYForSubstance(height: number, substance: any, x: number, z: number, chunk: DataView): void;
-                getMinYForSubstance(substance: any, x: number, z: number, chunk: DataView): number;
-                setMaxYForSubstance(height: number, substance: any, x: number, z: number, chunk: DataView): void;
-                getMaxYForSubstance(substance: any, x: number, z: number, chunk: DataView): number;
+                isSubstanceExposed(substance: import("Meta/index.js").VoxelTemplateSubstanceType, x: number, z: number, chunk: DataView): boolean;
+                markSubstanceAsExposed(substance: import("Meta/index.js").VoxelTemplateSubstanceType, x: number, z: number, chunk: DataView): void;
+                markSubstanceAsNotExposed(substance: import("Meta/index.js").VoxelTemplateSubstanceType, x: number, z: number, chunk: DataView): void;
+                setMinYForSubstance(height: number, substance: import("Meta/index.js").VoxelTemplateSubstanceType, x: number, z: number, chunk: DataView): void;
+                getMinYForSubstance(substance: import("Meta/index.js").VoxelTemplateSubstanceType, x: number, z: number, chunk: DataView): number;
+                setMaxYForSubstance(height: number, substance: import("Meta/index.js").VoxelTemplateSubstanceType, x: number, z: number, chunk: DataView): void;
+                getMaxYForSubstance(substance: import("Meta/index.js").VoxelTemplateSubstanceType, x: number, z: number, chunk: DataView): number;
             };
             state: {
                 positionByte: {
@@ -558,7 +559,7 @@ export declare const DVEFX: {
                         z: number;
                     };
                     setPosition(x: number, y: number, z: number): number;
-                    setPositionUseObj(positionObj: import("../Meta/Util.types.js").Position3Matrix): number;
+                    setPositionUseObj(positionObj: import("Meta/index.js").Position3Matrix): number;
                 };
                 indexes: {
                     states: number;
@@ -590,7 +591,7 @@ export declare const DVEFX: {
                     magmaDone: number;
                     magmaIndex: number;
                 };
-                updateChunkMinMax(voxelPOS: import("../Meta/Util.types.js").Position3Matrix, chunkStatesData: Uint32Array): void;
+                updateChunkMinMax(voxelPOS: import("Meta/index.js").Position3Matrix, chunkStatesData: Uint32Array): void;
                 getChunkMin(chunkStatesData: Uint32Array): number;
                 getChunkMax(chunkStatesData: Uint32Array): number;
                 isEmpty(chunkStatesData: Uint32Array): boolean;
@@ -607,18 +608,18 @@ export declare const DVEFX: {
                     fluidDone: boolean;
                     magmaDone: boolean;
                 };
-                addToVoxelCount(voxelSubstance: import("../Meta/index.js").VoxelSubstanceType, chunkStatesData: Uint32Array): void;
-                subtractFromVoxelCount(voxelSubstance: import("../Meta/index.js").VoxelSubstanceType, chunkStatesData: Uint32Array): void;
+                addToVoxelCount(voxelSubstance: import("Meta/index.js").VoxelSubstanceType, chunkStatesData: Uint32Array): void;
+                subtractFromVoxelCount(voxelSubstance: import("Meta/index.js").VoxelSubstanceType, chunkStatesData: Uint32Array): void;
                 getTotalVoxels(chunkStatesData: Uint32Array): void;
-                getTotalVoxelsOfASubstance(voxelSubstance: import("../Meta/index.js").VoxelSubstanceType, chunkStatesData: Uint32Array): void;
+                getTotalVoxelsOfASubstance(voxelSubstance: import("Meta/index.js").VoxelSubstanceType, chunkStatesData: Uint32Array): void;
             };
         };
     };
     worldComm: import("../Libs/ThreadComm/Comm/Comm.js").CommBase;
     parentComm: import("../Libs/ThreadComm/Comm/Comm.js").CommBase;
-    syncSettings(data: any): void;
+    syncSettings(data: EngineSettingsData): void;
     reStart(): void;
     isReady(): boolean;
     $INIT(): Promise<void>;
 };
-export declare type DivineVoxelEngineFX = typeof DVEFX;
+export type DivineVoxelEngineFX = typeof DVEFX;

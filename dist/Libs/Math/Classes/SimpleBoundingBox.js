@@ -1,29 +1,31 @@
 import { Vector3 } from "./Vector3.js";
 export class SimpleBoundingBox {
+    origin;
+    dimensions;
+    bounds = {
+        minX: Infinity,
+        maxX: -Infinity,
+        minZ: Infinity,
+        maxZ: -Infinity,
+        minY: Infinity,
+        maxY: -Infinity,
+    };
+    checkBounds = {
+        minX: Infinity,
+        maxX: -Infinity,
+        minZ: Infinity,
+        maxZ: -Infinity,
+        minY: Infinity,
+        maxY: -Infinity,
+    };
+    checkOrigin = new Vector3(0, 0, 0);
+    _voxelCheckMap = {};
+    _voxelCheckPoints = [];
+    _voxelBottomCheckPoints = [];
+    _voxelOriginPoints = [];
     constructor(origin, dimensions) {
         this.origin = origin;
         this.dimensions = dimensions;
-        this.bounds = {
-            minX: Infinity,
-            maxX: -Infinity,
-            minZ: Infinity,
-            maxZ: -Infinity,
-            minY: Infinity,
-            maxY: -Infinity,
-        };
-        this.checkBounds = {
-            minX: Infinity,
-            maxX: -Infinity,
-            minZ: Infinity,
-            maxZ: -Infinity,
-            minY: Infinity,
-            maxY: -Infinity,
-        };
-        this.checkOrigin = new Vector3(0, 0, 0);
-        this._voxelCheckMap = {};
-        this._voxelCheckPoints = [];
-        this._voxelBottomCheckPoints = [];
-        this._voxelOriginPoints = [];
         const ov = origin;
         this.checkOrigin.updateVector(ov.x, ov.y, ov.z);
         this._updateBounds();

@@ -1,8 +1,3 @@
-{
-    VoxelData;
-}
-from;
-"out/Meta/index";
 export const DreamLogVoxelData = {
     name: "Dream Log",
     shapeId: "Box",

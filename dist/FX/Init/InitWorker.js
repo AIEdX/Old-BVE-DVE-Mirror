@@ -1,8 +1,3 @@
-{
-    DivineVoxelEngineFX;
-}
-from;
-"FX/DivineStarVoxelEngineFX";
 import { ThreadComm } from "../../Libs/ThreadComm/ThreadComm.js";
 export async function InitWorker(DVEFX) {
     await ThreadComm.$INIT("fx");

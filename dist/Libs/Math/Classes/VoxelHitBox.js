@@ -1,6 +1,6 @@
 export class VoxelHitBox {
+    boundingBoxes = [];
     constructor(boundingBoxes) {
-        this.boundingBoxes = [];
         this.boundingBoxes = boundingBoxes;
     }
 }

@@ -1,28 +1,31 @@
+import type { WorldGenInterface } from "Meta/Interfaces/WorldGen/WorldGen.types";
+import type { VoxelData } from "Meta/index.js";
+import type { Position3Matrix } from "Meta/Util.types.js";
 import { ChunkData } from "Meta/Data/WorldData.types.js";
 export declare const DVEWG: {
-    worldGen: any;
+    worldGen: WorldGenInterface | null;
     heightByte: {
-        _getHeightMapData: Record<any, (byteData: number) => number>;
-        _setHeightMapData: Record<any, (height: number, byteData: number) => number>;
-        _markSubstanceAsNotExposed: Record<any, (data: number) => number>;
-        _markSubstanceAsExposed: Record<any, (data: number) => number>;
-        _isSubstanceExposed: Record<any, (data: number) => boolean>;
+        _getHeightMapData: Record<import("Meta/index.js").VoxelTemplateSubstanceType, (byteData: number) => number>;
+        _setHeightMapData: Record<import("Meta/index.js").VoxelTemplateSubstanceType, (height: number, byteData: number) => number>;
+        _markSubstanceAsNotExposed: Record<import("Meta/index.js").VoxelTemplateSubstanceType, (data: number) => number>;
+        _markSubstanceAsExposed: Record<import("Meta/index.js").VoxelTemplateSubstanceType, (data: number) => number>;
+        _isSubstanceExposed: Record<import("Meta/index.js").VoxelTemplateSubstanceType, (data: number) => boolean>;
         getStartingHeightMapValue(): number;
         initalizeChunk(chunkData: DataView): void;
-        updateChunkMinMax(voxelPOS: any, chunkData: DataView): void;
+        updateChunkMinMax(voxelPOS: Position3Matrix, chunkData: DataView): void;
         getChunkMin(chunkData: DataView): number;
         getChunkMax(chunkData: DataView): number;
-        calculateHeightRemoveDataForSubstance(height: number, substance: any, x: number, z: number, heightMap: DataView): boolean | undefined;
-        calculateHeightAddDataForSubstance(height: number, substance: any, x: number, z: number, chunk: DataView): void;
+        calculateHeightRemoveDataForSubstance(height: number, substance: import("Meta/index.js").VoxelTemplateSubstanceType, x: number, z: number, heightMap: DataView): boolean | undefined;
+        calculateHeightAddDataForSubstance(height: number, substance: import("Meta/index.js").VoxelTemplateSubstanceType, x: number, z: number, chunk: DataView): void;
         getLowestExposedVoxel(x: number, z: number, chunk: DataView): number;
         getHighestExposedVoxel(x: number, z: number, chunk: DataView): number;
-        isSubstanceExposed(substance: any, x: number, z: number, chunk: DataView): boolean;
-        markSubstanceAsExposed(substance: any, x: number, z: number, chunk: DataView): void;
-        markSubstanceAsNotExposed(substance: any, x: number, z: number, chunk: DataView): void;
-        setMinYForSubstance(height: number, substance: any, x: number, z: number, chunk: DataView): void;
-        getMinYForSubstance(substance: any, x: number, z: number, chunk: DataView): number;
-        setMaxYForSubstance(height: number, substance: any, x: number, z: number, chunk: DataView): void;
-        getMaxYForSubstance(substance: any, x: number, z: number, chunk: DataView): number;
+        isSubstanceExposed(substance: import("Meta/index.js").VoxelTemplateSubstanceType, x: number, z: number, chunk: DataView): boolean;
+        markSubstanceAsExposed(substance: import("Meta/index.js").VoxelTemplateSubstanceType, x: number, z: number, chunk: DataView): void;
+        markSubstanceAsNotExposed(substance: import("Meta/index.js").VoxelTemplateSubstanceType, x: number, z: number, chunk: DataView): void;
+        setMinYForSubstance(height: number, substance: import("Meta/index.js").VoxelTemplateSubstanceType, x: number, z: number, chunk: DataView): void;
+        getMinYForSubstance(substance: import("Meta/index.js").VoxelTemplateSubstanceType, x: number, z: number, chunk: DataView): number;
+        setMaxYForSubstance(height: number, substance: import("Meta/index.js").VoxelTemplateSubstanceType, x: number, z: number, chunk: DataView): void;
+        getMaxYForSubstance(substance: import("Meta/index.js").VoxelTemplateSubstanceType, x: number, z: number, chunk: DataView): number;
     };
     worldBounds: {
         bounds: {
@@ -91,11 +94,11 @@ export declare const DVEWG: {
             y: number;
             z: number;
         };
-        getChunkKey(chunkPOS: any): string;
+        getChunkKey(chunkPOS: Position3Matrix): string;
         getChunkKeyFromPosition(x: number, y: number, z: number): string;
-        getRegionKey(regionPOS: any): string;
+        getRegionKey(regionPOS: Position3Matrix): string;
         getRegionKeyFromPosition(x: number, y: number, z: number): string;
-        getVoxelPositionFromChunkPosition(x: number, y: number, z: number, chunkPOS: any): {
+        getVoxelPositionFromChunkPosition(x: number, y: number, z: number, chunkPOS: Position3Matrix): {
             x: number;
             y: number;
             z: number;
@@ -120,12 +123,12 @@ export declare const DVEWG: {
             y: number;
         };
     };
-    setWorldGen(worldGen: any): void;
+    setWorldGen(worldGen: WorldGenInterface): void;
     generate(x: number, z: number, data: any): Promise<void>;
-    __handleHeightMapUpdateForVoxelAdd(voxelPOS: any, voxelData: any, chunk: ChunkData): void;
+    __handleHeightMapUpdateForVoxelAdd(voxelPOS: Position3Matrix, voxelData: VoxelData, chunk: ChunkData): void;
     getVoxelPaletteId(voxelId: string, voxelStateId: number): void;
     _paintVoxel(voxelId: string, voxelStateId: number, shapeState: number, x: number, y: number, z: number): void;
-    _addToRGBLightUpdateQue(voxelData: any, x: number, y: number, z: number): void;
+    _addToRGBLightUpdateQue(voxelData: VoxelData, x: number, y: number, z: number): void;
     paintVoxel(voxelId: string, voxelState: number, shapeState: number, x: number, y: number, z: number): Promise<void>;
 };
-export declare type DivineVoxelEngineWorldGeneration = typeof DVEWG;
+export type DivineVoxelEngineWorldGeneration = typeof DVEWG;

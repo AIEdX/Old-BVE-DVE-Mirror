@@ -1,13 +1,4 @@
 import { DataHooks } from "../../Data/DataHooks.js";
-{
-    ChunkData,
-        Column,
-        WorldDimensions,
-        Region,
-    ;
-}
-from;
-"Meta/Data/WorldData.types";
 import { WorldBounds } from "./WorldBounds.js";
 import { ChunkReader } from "../Chunk/ChunkReader.js";
 import { HeightMapData } from "../Chunk/HeightMapData.js";

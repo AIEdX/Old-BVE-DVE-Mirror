@@ -1,8 +1,3 @@
-{
-    VoxelData;
-}
-from;
-"dve/Meta/index";
 export const MarkerBoxVoxelData = {
     name: "Marker Box",
     shapeId: "Box",

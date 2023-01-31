@@ -1,5 +1,7 @@
+/// <reference types="babylonjs" />
+import { VoxelSubstanceType } from "Meta/Data/Voxels/Voxel.types";
 export declare const AnimationManager: {
-    animatedMaterials: Record<import("../../../Meta/index").TextureTypes, any>;
+    animatedMaterials: Record<VoxelSubstanceType | "Item", BABYLON.ShaderMaterial>;
     animCount: number;
     animations: {
         uniformShaderId: string;
@@ -7,7 +9,7 @@ export declare const AnimationManager: {
         currentFrame: number;
         currentCount: number;
         keyCounts: number[];
-        substance: import("../../../Meta/index").TextureTypes;
+        substance: VoxelSubstanceType | "Item";
     }[];
     /**# Register Animations
      * ---
@@ -18,11 +20,11 @@ export declare const AnimationManager: {
      * @param animations
      * @returns
      */
-    registerAnimations(voxelSubstanceType: import("../../../Meta/index").TextureTypes, animations: number[][], animationTimes: number[][], overlay?: boolean): {
+    registerAnimations(voxelSubstanceType: VoxelSubstanceType | "Item", animations: number[][], animationTimes: number[][], overlay?: boolean): {
         uniforms: string[];
         uniformRegisterCode: string;
         animationFunctionCode: string;
     };
-    registerMaterial(voxelSubstanceType: import("../../../Meta/index").TextureTypes, material: any): void;
+    registerMaterial(voxelSubstanceType: VoxelSubstanceType | "Item", material: BABYLON.ShaderMaterial): void;
     startAnimations(): void;
 };

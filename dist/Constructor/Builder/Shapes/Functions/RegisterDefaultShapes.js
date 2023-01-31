@@ -1,8 +1,3 @@
-{
-    DVEB;
-}
-from;
-"../../DivineVoxelEngineBuilder.js";
 //shapes
 import { FullBoxDiagonalIntersection } from "../default/DiagonalIntersection/FullBoxDiagonalIntersection.voxe.shape.js";
 import { BoxVoxelShape } from "../default/Box/Box.voxel.shape.js";

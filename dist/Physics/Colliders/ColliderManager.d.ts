@@ -1,5 +1,6 @@
+import type { ColliderObject } from "Meta/Interfaces/Physics/Collider.type";
 export declare const ColliderManager: {
-    colliders: Record<string, any>;
-    registerCollider(collider: any): void;
-    getCollider(id: string): any;
+    colliders: Record<string, ColliderObject>;
+    registerCollider(collider: ColliderObject): void;
+    getCollider(id: string): ColliderObject;
 };

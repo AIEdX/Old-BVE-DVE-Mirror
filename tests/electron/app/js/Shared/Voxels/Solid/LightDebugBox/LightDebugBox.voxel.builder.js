@@ -1,8 +1,3 @@
-{
-    VoxelConstructorObject;
-}
-from;
-"out/Meta/index.js";
 let lightDebugBoxTextures = {};
 export const LightDebugBoxVoxelBuilderThread = {
     id: "dve:lightdebug",

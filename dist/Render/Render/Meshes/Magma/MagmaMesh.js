@@ -1,10 +1,3 @@
-{
-    MeshSetData,
-        VoxelMeshInterface,
-    ;
-}
-from;
-"Meta/Render/Meshes/VoxelMesh.interface";
 import { MagmaMaterial } from "../../Materials/Magma/MagmaMaterial.js";
 export const MagmaMesh = {
     pickable: false,

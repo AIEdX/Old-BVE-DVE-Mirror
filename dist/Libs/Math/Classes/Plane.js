@@ -1,11 +1,15 @@
 export class Plane {
+    v1;
+    v2;
+    v3;
+    v4;
+    minX = Infinity;
+    maxX = -Infinity;
+    minZ = Infinity;
+    maxZ = -Infinity;
+    minY = Infinity;
+    maxY = -Infinity;
     constructor(data) {
-        this.minX = Infinity;
-        this.maxX = -Infinity;
-        this.minZ = Infinity;
-        this.maxZ = -Infinity;
-        this.minY = Infinity;
-        this.maxY = -Infinity;
         this.v1 = data.v1;
         this.v2 = data.v2;
         this.v3 = data.v3;

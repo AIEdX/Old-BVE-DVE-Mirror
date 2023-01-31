@@ -1,36 +1,3 @@
-{
-    DirectionNames,
-        EngineSettingsData,
-        VoxelSubstanceType,
-    ;
-}
-from;
-"Meta/index.js";
-{
-    ChunkData;
-}
-from;
-"Meta/Data/WorldData.types.js";
-{
-    FullChunkTemplate;
-}
-from;
-"Meta/Constructor/ChunkTemplate.types.js";
-{
-    VoxelProcessData;
-}
-from;
-"Meta/Constructor/Voxel.types.js";
-{
-    Rotations;
-}
-from;
-"Meta/Constructor/Mesher.types.js";
-{
-    CullFaceOverride;
-}
-from;
-"Meta/Constructor/OverRide.types";
 //functions
 import { CalculateVoxelLight, VoxelLightMixCalc, } from "./Functions/CalculateVoxelLight.js";
 import { CalculateFlow } from "./Functions/CalculateFlow.js";

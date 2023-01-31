@@ -1,13 +1,3 @@
-{
-    DirectionNames;
-}
-from;
-"Meta/Util.types";
-{
-    stairBuildData;
-}
-from;
-"./StairBuilder";
 export const StairData = {
     /**
      *    Bottom

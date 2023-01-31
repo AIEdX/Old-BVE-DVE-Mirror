@@ -1,7 +1,7 @@
 export declare const CreatePromiseCheck: (data: {
     check: () => boolean;
-    onReady?: (() => any) | undefined;
+    onReady?: () => any;
     checkInterval: number;
-    failTimeOut?: number | undefined;
-    onFail?: (() => any) | undefined;
+    failTimeOut?: number;
+    onFail?: () => any;
 }) => Promise<boolean>;

@@ -1,6 +1,6 @@
 /// <reference types="babylonjs" />
 import { EngineSettingsData } from "Meta/index";
-export declare type VoxelMeshInterface = {
+export type VoxelMeshInterface = {
     pickable: boolean;
     checkCollisions: boolean;
     seralize: boolean;
@@ -12,7 +12,7 @@ export declare type VoxelMeshInterface = {
 } & {
     [key: string]: any;
 };
-export declare type MeshSetData = {
+export type MeshSetData = {
     positionArray: Float32Array;
     normalsArray: Float32Array;
     indiciesArray: Int32Array;

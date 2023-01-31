@@ -1,1 +1,1 @@
-export declare type EntityTypes = "player" | "item" | "npc" | "being" | "util";
+export type EntityTypes = "player" | "item" | "npc" | "being" | "util";

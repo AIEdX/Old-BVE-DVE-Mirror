@@ -1,18 +1,3 @@
-{
-    WorldGenInterface;
-}
-from;
-"Meta/Interfaces/WorldGen/WorldGen.types";
-{
-    VoxelData;
-}
-from;
-"Meta/index.js";
-{
-    Position3Matrix;
-}
-from;
-"Meta/Util.types.js";
 //objects
 import { DVEC } from "../DivineVoxelEngineConstructor.js";
 import { ConstructorRemoteThreadTasks } from "../../Common/Threads/Contracts/WorldTasks.js";

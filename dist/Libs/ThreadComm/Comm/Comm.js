@@ -1,30 +1,16 @@
-{
-    CommPortTypes, NodeWorker;
-}
-from;
-"../Meta/Comm/Comm.types";
-{
-    MessageFunction, MessageRecord;
-}
-from;
-"../Meta/Util.types.js";
-{
-    CommManager;
-}
-from;
-"../Manager/CommManager.js";
 import { ThreadComm } from "../ThreadComm.js";
 import { TCMessageHeaders, TCInternalMessages, TCDataSyncMessages, } from "../Constants/Messages.js";
 export class CommBase {
+    name;
+    managerName;
+    environment = "browser";
+    __ready = false;
+    port = null;
+    messageFunctions = {};
+    _manager = null;
     constructor(name, managerName = "worker", commManager = null) {
         this.name = name;
         this.managerName = managerName;
-        this.environment = "browser";
-        this.__ready = false;
-        this.port = null;
-        this.messageFunctions = {};
-        this._manager = null;
-        this.__onSetPortRun = (port) => { };
         this._manager = commManager;
     }
     destroy() {
@@ -43,6 +29,7 @@ export class CommBase {
             ThreadComm.threadName,
         ]);
     }
+    __onSetPortRun = (port) => { };
     isPortSet() {
         return Boolean(this.port);
     }

@@ -1,8 +1,3 @@
-{
-    VoxelSubstanceType;
-}
-from;
-"Meta/Data/Voxels/Voxel.types";
 export const TextureManager = {
     textureDataHasBeenSet: false,
     uvTextureMap: {},

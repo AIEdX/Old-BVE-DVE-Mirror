@@ -1,11 +1,13 @@
 export class SolidMaterialPlugin extends BABYLON.MaterialPluginBase {
+    onUBSet;
+    _texArray;
+    _textureSet = false;
+    ubof = false;
     constructor(material, texArray, onUBSet) {
-        this.onUBSet = onUBSet;
-        this._textureSet = false;
-        this.ubof = false;
         var priority = 200;
         var defines = { TWOD_ARRAY_TEXTURE: false };
         super(material, "TestPlugin", priority, defines);
+        this.onUBSet = onUBSet;
         this._texArray = texArray;
         this._enable(true);
     }

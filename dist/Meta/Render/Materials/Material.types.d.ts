@@ -1,6 +1,6 @@
 /// <reference types="babylonjs" />
 import { EngineSettingsData } from "Meta/index";
-export declare type MaterialCreateData = {
+export type MaterialCreateData = {
     settings: EngineSettingsData;
     scene: BABYLON.Scene;
     texture: BABYLON.RawTexture2DArray;

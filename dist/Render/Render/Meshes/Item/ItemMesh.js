@@ -1,10 +1,3 @@
-{
-    MeshSetData,
-        VoxelMeshInterface,
-    ;
-}
-from;
-"Meta/Render/Meshes/VoxelMesh.interface";
 import { ItemMaterial } from "../../Materials/Item/ItemMaterial.js";
 import { DVER } from "../../../DivineVoxelEngineRender.js";
 export const ItemMesh = {

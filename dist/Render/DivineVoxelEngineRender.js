@@ -1,13 +1,3 @@
-{
-    DVERInitData;
-}
-from;
-"Meta/Render/DVER";
-{
-    EngineSettingsData;
-}
-from;
-"Meta/Data/Settings/EngineSettings.types";
 //objects
 import { Util } from "../Global/Util.helper.js";
 import { RenderedEntitesManager } from "./RenderedEntites/RenderedEntites.manager.js";

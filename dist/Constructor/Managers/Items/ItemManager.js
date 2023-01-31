@@ -1,13 +1,5 @@
 //types
 import { DVEC } from "../../DivineVoxelEngineConstructor.js";
-{
-    ItemConstructorObject,
-        ItemConstructorThreadHooks,
-        ItemData,
-    ;
-}
-from;
-"Meta/Data/Items/Item.types.js";
 export const ItemManager = {
     itemObjects: {},
     itemShapes: {},

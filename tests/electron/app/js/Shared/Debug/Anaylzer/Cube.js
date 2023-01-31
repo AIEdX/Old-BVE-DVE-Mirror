@@ -1,13 +1,3 @@
-{
-    DivineVoxelEngineRender;
-}
-from;
-"../../../../out/Render/DivineVoxelEngineRender";
-{
-    DivineVoxelEngineWorld;
-}
-from;
-"../../../../out/World/DivineVoxelEngineWorld";
 import { LightData } from "../../../../out/Data/Light/LightByte.js";
 export const GetAnalyzerCubeRender = (DVER, positionLock) => {
     const cubeMaterial = new BABYLON.StandardMaterial("block");

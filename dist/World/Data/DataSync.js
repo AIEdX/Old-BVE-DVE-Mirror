@@ -1,27 +1,3 @@
-{
-    DimensionData;
-}
-from;
-"Meta/Data/DimensionData.types.js";
-{
-    CommBase;
-}
-from;
-"Libs/ThreadComm/Comm/Comm.js";
-{
-    CommManager;
-}
-from;
-"Libs/ThreadComm/Manager/CommManager.js";
-{
-    ChunkSyncData,
-        ChunkUnSyncData,
-        VoxelDataSync,
-        VoxelPaletteSyncData,
-    ;
-}
-from;
-"Meta/Data/DataSync.types.js";
 //objects
 import { VoxelDataCreator } from "./VoxelDataCreator.js";
 import { WorldRegister } from "../../Data/World/WorldRegister.js";

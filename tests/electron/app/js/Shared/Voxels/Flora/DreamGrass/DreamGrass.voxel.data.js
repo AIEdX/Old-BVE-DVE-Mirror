@@ -1,8 +1,3 @@
-{
-    VoxelData;
-}
-from;
-"out/Meta/index";
 export const DreamGrassVoxelData = {
     name: "Dream Grass",
     shapeId: "FullBoxDiagonalIntersection",

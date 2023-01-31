@@ -1,4 +1,4 @@
-export declare type ItemMeshSetData = {
+export type ItemMeshSetData = {
     positionArray: Float32Array;
     normalsArray: Float32Array;
     indiciesArray: Int32Array;

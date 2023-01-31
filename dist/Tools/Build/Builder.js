@@ -3,15 +3,13 @@ import { ChunkReader } from "../../Data/Chunk/ChunkReader.js";
 import { WorldRegister } from "../../Data/World/WorldRegister.js";
 import { CCM } from "../../Common/Threads/Constructor/ConstructorComm.js";
 export class BuilderTool {
-    constructor() {
-        this.data = {
-            dimesnion: 0,
-            x: 0,
-            y: 0,
-            z: 0,
-            LOD: 1,
-        };
-    }
+    data = {
+        dimesnion: 0,
+        x: 0,
+        y: 0,
+        z: 0,
+        LOD: 1,
+    };
     setDimension(dimensionId) {
         this.data.dimesnion = DimensionsRegister.getDimensionNumericId(dimensionId);
         return this;

@@ -1,8 +1,3 @@
-{
-    EngineSettingsData, RecursivePartial;
-}
-from;
-"Meta/index.js";
 //objects
 import { AnimationManager } from "./Animations/AnimationManager.js";
 import { ShaderBuilder } from "./Shaders/ShaderBuilder.js";

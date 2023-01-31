@@ -1,4 +1,4 @@
-export declare type LocationData = [
+export type LocationData = [
     dimensionId: string | number,
     x: number,
     y: number,

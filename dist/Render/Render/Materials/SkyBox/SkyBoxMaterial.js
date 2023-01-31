@@ -1,8 +1,3 @@
-{
-    EngineSettingsData;
-}
-from;
-"Meta/Data/Settings/EngineSettings.types";
 import { DVER } from "../../../DivineVoxelEngineRender.js";
 export const SkyBoxMaterial = {
     material: null,

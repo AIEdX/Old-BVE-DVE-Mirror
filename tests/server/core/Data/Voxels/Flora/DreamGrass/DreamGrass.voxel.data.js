@@ -1,8 +1,3 @@
-{
-    VoxelData;
-}
-from;
-"dve/Meta/index";
 export const DreamGrassVoxelData = {
     name: "Dream Grass",
     shapeId: "FullBoxDiagonalIntersection",

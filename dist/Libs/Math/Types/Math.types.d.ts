@@ -1,4 +1,4 @@
-export declare type BoundsObject = {
+export type BoundsObject = {
     minX: number;
     maxX: number;
     minZ: number;
@@ -6,16 +6,16 @@ export declare type BoundsObject = {
     minY: number;
     maxY: number;
 };
-export declare type Position3Matrix = {
+export type Position3Matrix = {
     x: number;
     y: number;
     z: number;
 };
-export declare type Position2Matrix = {
+export type Position2Matrix = {
     x: number;
     z: number;
 };
-export declare type DimensionsVector3 = {
+export type DimensionsVector3 = {
     w: number;
     h: number;
     d: number;

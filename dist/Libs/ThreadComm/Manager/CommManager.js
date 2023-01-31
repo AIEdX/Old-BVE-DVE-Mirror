@@ -1,18 +1,3 @@
-{
-    CommPortTypes;
-}
-from;
-"../Meta/Comm/Comm.types";
-{
-    MessageFunction, MessageRecord;
-}
-from;
-"../Meta/Util.types.js";
-{
-    CommManagerData;
-}
-from;
-"../Meta/Manager/Manager.types.js";
 //constants
 import { TCMessageHeaders, TCInternalMessages } from "../Constants/Messages.js";
 //classes
@@ -20,17 +5,17 @@ import { CommBase } from "../Comm/Comm.js";
 import { QueueManager } from "../Queue/QueueManager.js";
 import { ThreadComm } from "../ThreadComm.js";
 export class CommManager {
+    _totalComms = 0;
+    _currentCom = 0;
+    name = "";
+    __comms = [];
+    __data = {
+        name: "",
+        onPortSet: (port, commName) => { },
+    };
+    __queues = {};
+    messageFunctions = {};
     constructor(data) {
-        this._totalComms = 0;
-        this._currentCom = 0;
-        this.name = "";
-        this.__comms = [];
-        this.__data = {
-            name: "",
-            onPortSet: (port, commName) => { },
-        };
-        this.__queues = {};
-        this.messageFunctions = {};
         this.__data = data;
         this.name = data.name;
     }

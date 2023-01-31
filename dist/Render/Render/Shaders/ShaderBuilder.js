@@ -1,11 +1,6 @@
 //Note to self look into these for adding shadows from a light to the custom shaders.
 //https://forum.babylonjs.com/t/mesh-with-custom-shader-material-does-not-cast-shadow/7761/2
 //https://playground.babylonjs.com/#ENPTI9#8
-{
-    VoxelSubstanceType;
-}
-from;
-"Meta/Data/Voxels/Voxel.types";
 //shaders
 import { floraShaders } from "./Code/Flora/Flora.shader.js";
 import { fluidShaders } from "./Code/Fluid/Fluid.shaders.js";

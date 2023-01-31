@@ -1,9 +1,4 @@
 import { DVEB } from "../../../DivineVoxelEngineBuilder.js";
-{
-    VoxelShapeInterface;
-}
-from;
-"Meta/Constructor/VoxelShape.types";
 import { buildStair, stairCachedPosition } from "./StairBuilder.js";
 import { StairData } from "./StairData.js";
 import { StairAOBoxOverrides } from "./StairAO.overrides.js";

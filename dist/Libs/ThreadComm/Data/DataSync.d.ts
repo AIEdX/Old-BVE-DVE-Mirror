@@ -1,5 +1,5 @@
-declare type OnSyncFunction<T> = (data: T) => void;
-declare type OnUnSyncFunction<T> = (data: T) => void;
+type OnSyncFunction<T> = (data: T) => void;
+type OnUnSyncFunction<T> = (data: T) => void;
 export declare class DataSync<T, K> {
     __onSyncFunctions: OnSyncFunction<T>[];
     __onUnSyncFunctions: OnUnSyncFunction<K>[];

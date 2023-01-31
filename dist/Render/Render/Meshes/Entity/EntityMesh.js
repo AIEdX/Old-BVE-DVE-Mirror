@@ -1,10 +1,3 @@
-{
-    MeshSetData,
-        VoxelMeshInterface,
-    ;
-}
-from;
-"Meta/Render/Meshes/VoxelMesh.interface";
 import { DVER } from "../../../DivineVoxelEngineRender.js";
 import { SolidMaterial } from "../../Materials/Solid/SolidMaterial.js";
 export const EntityMesh = {

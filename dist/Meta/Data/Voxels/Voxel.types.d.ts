@@ -7,20 +7,20 @@ import type { VoxelProcessData } from "Meta/Constructor/Voxel.types";
  * While the the fluid and magma will chunks will have their own seperate meshes per chunk.
  * Transparent voxels will not cause the faces of solid voxels next to them to be culled they also have double sided rendering.
  */
-export declare type VoxelSubstanceType = "solid" | "transparent" | "flora" | "fluid" | "magma";
+export type VoxelSubstanceType = "solid" | "transparent" | "flora" | "fluid" | "magma";
 /**VoxelT emplateS ubstance Type
  * ---
  * Basically same as Voxel Substance Type but only has the substances which have their own generated mesh.
  */
-export declare type VoxelTemplateSubstanceType = "solid" | "flora" | "fluid" | "magma";
-export declare type VoxelHooks = "texturesRegistered" | "beforeAdd" | "afterAdd" | "beforeRemove" | "afterAfter" | any;
-export declare type VoxelConstructorThreadHooks = "texturesRegistered" | any;
-export declare type VoxelWorldThreadHooks = "beforeAdd" | "afterAdd" | "beforeRemove" | "afterAfter" | any;
+export type VoxelTemplateSubstanceType = "solid" | "flora" | "fluid" | "magma";
+export type VoxelHooks = "texturesRegistered" | "beforeAdd" | "afterAdd" | "beforeRemove" | "afterAfter" | any;
+export type VoxelConstructorThreadHooks = "texturesRegistered" | any;
+export type VoxelWorldThreadHooks = "beforeAdd" | "afterAdd" | "beforeRemove" | "afterAfter" | any;
 /**# Voxel Data
  * ---
  * This the needed information for each voxel.
  */
-export declare type VoxelData = {
+export type VoxelData = {
     name: string;
     shapeId: string;
     id: string;
@@ -36,7 +36,7 @@ export declare type VoxelData = {
     lightSource?: boolean;
     lightValue?: number;
 };
-export declare type VoxelConstructorObject = {
+export type VoxelConstructorObject = {
     id: string;
     hooks: Record<VoxelConstructorThreadHooks, (DVEB: typeof DVEBuilswe) => any>;
     cullFace?: {

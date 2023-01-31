@@ -39,7 +39,7 @@ import { AOAddOverride, AOAFlipOverride, CullFaceOverride } from "./OverRide.typ
 * The relative chunk position that the voxel is being added.
 * @var position: Position3Matrix;
 */
-export declare type VoxelShapeAddData = {
+export type VoxelShapeAddData = {
     LOD: number;
     substance: VoxelSubstanceType;
     positions: number[];
@@ -69,7 +69,7 @@ export declare type VoxelShapeAddData = {
     aoIndex: number;
     position: Position3Matrix;
 };
-export declare type VoxelShapeAddReturnData = {
+export type VoxelShapeAddReturnData = {
     newIndicieIndex: number;
     newUVTemplateIndex: number;
     newOverlayUVTemplateIndex: number;
@@ -84,7 +84,7 @@ export declare type VoxelShapeAddReturnData = {
  * Voxel shapes are used by the mesh bulder to generate the mush.
  * It checks with the voxel shape to build the proper mesh.
  */
-export declare type VoxelShapeInterface = {
+export type VoxelShapeInterface = {
     id: string;
     cullFaceOverrideFunctions: Record<string, (data: CullFaceOverride) => boolean>;
     aoAddOverrideFunctions: Record<string, (data: AOAddOverride) => boolean>;

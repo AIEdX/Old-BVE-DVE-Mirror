@@ -1,8 +1,3 @@
-{
-    ElementTreeData;
-}
-from;
-"libs/index.js";
 import { ElementTree } from "../../libs/ElementTree/ElementTree.js";
 import { VoxelList } from "./VoxelList.js";
 let currentvoxel = "dve:dreamstone";

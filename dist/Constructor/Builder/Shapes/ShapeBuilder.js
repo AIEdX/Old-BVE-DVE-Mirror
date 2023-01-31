@@ -1,13 +1,3 @@
-{
-    VoxelShapeAddData;
-}
-from;
-"Meta/index";
-{
-    DirectionNames, Position3Matrix;
-}
-from;
-"Meta/Util.types";
 const defaultTransform = {
     v1: { x: 0, y: 0, z: 0 },
     v2: { x: 0, y: 0, z: 0 },

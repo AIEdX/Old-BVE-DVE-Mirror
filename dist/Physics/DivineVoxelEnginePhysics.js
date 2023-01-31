@@ -1,24 +1,9 @@
-{
-    EntityObject;
-}
-from;
-"Meta/Interfaces/Physics/Entity.type.js";
-{
-    ColliderObject;
-}
-from;
-"Meta/Interfaces/Physics/Collider.type.js";
 //objects
 import { VoxelMath } from "../Libs/Math/VoxelMath.js";
 import { CollisionsHanlder } from "./Collisions/CollisionsHandler.js";
 import { EntityBase } from "./Entities/Entity.base.js";
 import { ColliderManager } from "./Colliders/ColliderManager.js";
 import { RegisterDefaultColliders } from "./Colliders/Functions/RegisterDefaultColliders.js";
-{
-    VoxelManager;
-}
-from;
-"Data/Voxel/VoxelManager.js";
 import { WorldPainter } from "../Data/World/WorldPainter.js";
 import { DataTool } from "../Tools/Data/DataTool.js";
 export const DVEPH = {

@@ -1,5 +1,5 @@
 import { Plane } from "./Plane";
-export declare type BoundingBoxData = {
+export type BoundingBoxData = {
     topPlane: Plane;
     bottomPlane: Plane;
     northPlane: Plane;

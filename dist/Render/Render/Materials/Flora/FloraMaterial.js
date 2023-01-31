@@ -1,13 +1,3 @@
-{
-    EngineSettingsData;
-}
-from;
-"Meta/Data/Settings/EngineSettings.types";
-{
-    MaterialCreateData;
-}
-from;
-"Meta/Render/Materials/Material.types.js";
 import { DVER } from "../../../DivineVoxelEngineRender.js";
 export const FloraMaterial = {
     material: null,

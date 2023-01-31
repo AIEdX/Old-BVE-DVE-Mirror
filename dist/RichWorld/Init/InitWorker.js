@@ -1,8 +1,3 @@
-{
-    DivineVoxelEngineRichWorld;
-}
-from;
-"RichWorld/DivineStarVoxelEngineRichWorld";
 import { ThreadComm } from "../../Libs/ThreadComm/ThreadComm.js";
 export async function InitWorker(DVERW) {
     ThreadComm.$INIT("rich-world");

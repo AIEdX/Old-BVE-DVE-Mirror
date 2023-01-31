@@ -1,8 +1,3 @@
-{
-    Queue;
-}
-from;
-"Global/Util/Queue.js";
 //functions
 import { runRGBUpdateAt, runRGBRemove, runRGBRemoveAt, runRGBUpdate, } from "./Functions/RGBLight.js";
 import { runSunLightRemove, runSunLightRemoveAt, runSunLightUpdate, runSunLightUpdateAt, } from "./Functions/SunLight.js";

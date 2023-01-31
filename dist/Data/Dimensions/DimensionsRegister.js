@@ -1,11 +1,4 @@
 import { DataHooks } from "../DataHooks.js";
-{
-    DimensionData,
-        DimensionOptions,
-    ;
-}
-from;
-"Meta/Data/DimensionData.types";
 import { WorldRegister } from "../World/WorldRegister.js";
 export const DimensionsRegister = {
     _count: 1,

@@ -1,8 +1,3 @@
-{
-    VoxelData, VoxelSubstanceType;
-}
-from;
-"Meta/index";
 export const VoxelHelper = {
     substanceMap: {
         solid: 1,

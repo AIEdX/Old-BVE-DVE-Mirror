@@ -1,21 +1,4 @@
 import { DVEB } from "../../../DivineVoxelEngineBuilder.js";
-{
-    VoxelShapeAddData,
-        VoxelShapeInterface,
-    ;
-}
-from;
-"Meta/Constructor/VoxelShape.types";
-{
-    DirectionNames;
-}
-from;
-"Meta/Util.types.js";
-{
-    CullFaceOverride;
-}
-from;
-"Meta/Constructor/OverRide.types.js";
 const shapeDimensions = {
     width: 0.5,
     depth: 0.5,

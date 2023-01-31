@@ -1,9 +1,9 @@
-export declare type UVCords = {
+export type UVCords = {
     start: number;
     end: number;
 };
-export declare type Rotations = 0 | 90 | 180 | 270 | 360;
-export declare type UVFunctionData = {
+export type Rotations = 0 | 90 | 180 | 270 | 360;
+export type UVFunctionData = {
     uvs: number[];
     uv: number;
     width: UVCords;

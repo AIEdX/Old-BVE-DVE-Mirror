@@ -1,13 +1,19 @@
 export class BoundingBox {
+    topPlane;
+    bottomPlane;
+    northPlane;
+    southPlane;
+    eastPlane;
+    westPlane;
+    bounds = {
+        minX: Infinity,
+        maxX: -Infinity,
+        minZ: Infinity,
+        maxZ: -Infinity,
+        minY: Infinity,
+        maxY: -Infinity,
+    };
     constructor(data) {
-        this.bounds = {
-            minX: Infinity,
-            maxX: -Infinity,
-            minZ: Infinity,
-            maxZ: -Infinity,
-            minY: Infinity,
-            maxY: -Infinity,
-        };
         this.topPlane = data.topPlane;
         this._doMinMaxCheck(this.topPlane);
         this.bottomPlane = data.bottomPlane;

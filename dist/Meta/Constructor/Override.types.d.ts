@@ -1,7 +1,7 @@
 import { VoxelSubstanceType } from "Meta/index";
 import { DirectionNames } from "Meta/Util.types";
 import { VoxelShapeInterface } from "Meta/Constructor/VoxelShape.types";
-export declare type CullFaceOverride = {
+export type CullFaceOverride = {
     face: DirectionNames;
     substanceResult: boolean;
     shapeState: number;
@@ -15,7 +15,7 @@ export declare type CullFaceOverride = {
     y: number;
     z: number;
 };
-export declare type AOAddOverride = {
+export type AOAddOverride = {
     face: DirectionNames;
     substanceResult: boolean;
     shapeState: number;
@@ -32,7 +32,7 @@ export declare type AOAddOverride = {
     ny: number;
     nz: number;
 };
-export declare type AOAFlipOverride = {
+export type AOAFlipOverride = {
     face: DirectionNames;
     shapeState: number;
 };

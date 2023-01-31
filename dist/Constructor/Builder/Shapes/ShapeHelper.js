@@ -1,13 +1,3 @@
-{
-    DirectionNames;
-}
-from;
-"Meta/Util.types.js";
-{
-    VoxelShapeAddData, VoxelShapeAddReturnData;
-}
-from;
-"Meta/index";
 //objects
 import { LightData } from "../../../Data/Light/LightByte.js";
 import { FaceByte } from "../../../Data/Meshing/FaceByte.js";

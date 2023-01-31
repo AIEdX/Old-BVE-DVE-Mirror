@@ -1,17 +1,3 @@
-{
-    ChunkSyncData,
-        ChunkUnSyncData,
-        VoxelDataSync,
-        VoxelPaletteSyncData,
-    ;
-}
-from;
-"Meta/Data/DataSync.types.js";
-{
-    DimensionData;
-}
-from;
-"Meta/Data/DimensionData.types.js";
 //objects
 import { ThreadComm } from "../Libs/ThreadComm/ThreadComm.js";
 import { WorldRegister } from "./World/WorldRegister.js";

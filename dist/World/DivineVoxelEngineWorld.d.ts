@@ -94,6 +94,10 @@ export declare const DVEW: {
                 checkFluidCollisions: boolean;
                 checkFloraCollisions: boolean;
                 checkSolidCollisions: boolean;
+                /**# Divine Voxel Engine World
+                 * ---
+                 * This handles everything in the world worker context.
+                 */
                 seralize: boolean;
                 pickable: boolean;
             };
@@ -134,13 +138,12 @@ export declare const DVEW: {
             regionZPow2: number;
             regionXSize: number;
             regionYSize: number;
-            /**# Divine Voxel Engine World
-             * ---
-             * This handles everything in the world worker context.
-             */
             regionZSize: number;
             __regionPosition: {
-                x: number;
+                x: number; /**# Divine Voxel Engine World
+                 * ---
+                 * This handles everything in the world worker context.
+                 */
                 y: number;
                 z: number;
             };
@@ -171,7 +174,10 @@ export declare const DVEW: {
             setChunkBounds(pow2X: number, pow2Y: number, pow2Z: number): void;
             setRegionBounds(pow2X: number, pow2Y: number, pow2Z: number): void;
             getRegionPosition(x: number, y: number, z: number): {
-                x: number;
+                x: number; /**# Divine Voxel Engine World
+                 * ---
+                 * This handles everything in the world worker context.
+                 */
                 y: number;
                 z: number;
             };
@@ -369,13 +375,12 @@ export declare const DVEW: {
             regionZPow2: number;
             regionXSize: number;
             regionYSize: number;
-            /**# Divine Voxel Engine World
-             * ---
-             * This handles everything in the world worker context.
-             */
             regionZSize: number;
             __regionPosition: {
-                x: number;
+                x: number; /**# Divine Voxel Engine World
+                 * ---
+                 * This handles everything in the world worker context.
+                 */
                 y: number;
                 z: number;
             };
@@ -406,7 +411,10 @@ export declare const DVEW: {
             setChunkBounds(pow2X: number, pow2Y: number, pow2Z: number): void;
             setRegionBounds(pow2X: number, pow2Y: number, pow2Z: number): void;
             getRegionPosition(x: number, y: number, z: number): {
-                x: number;
+                x: number; /**# Divine Voxel Engine World
+                 * ---
+                 * This handles everything in the world worker context.
+                 */
                 y: number;
                 z: number;
             };
@@ -660,10 +668,6 @@ export declare const DVEW: {
         }>;
         $INIT(): void;
         isReady(): boolean;
-        /**# Divine Voxel Engine World
-         * ---
-         * This handles everything in the world worker context.
-         */
         registerComm(comm: import("../Libs/ThreadComm/Comm/Comm.js").CommBase | import("../Libs/ThreadComm/Manager/CommManager.js").CommManager): void;
         dimesnion: {
             unSync(id: string | number): void;
@@ -995,4 +999,4 @@ export declare const DVEW: {
         };
     };
 };
-export declare type DivineVoxelEngineWorld = typeof DVEW;
+export type DivineVoxelEngineWorld = typeof DVEW;

@@ -1,8 +1,3 @@
-{
-    IlluminationManager;
-}
-from;
-"../IlluminationManager";
 export function runSunLightRemoveAt(x, y, z) {
     this._sDataTool.loadIn(x, y, z);
     const l = this.lightData.getS(this._sDataTool.getLight());

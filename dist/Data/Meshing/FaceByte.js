@@ -1,11 +1,11 @@
 // (this.byteValue >>> index) & 1
 const faceMasks = {
     top: 0b11111,
-    bottom: 992,
-    north: 31744,
-    south: 1015808,
-    east: 32505856,
-    west: 1040187392,
+    bottom: 0b11111_00000,
+    north: 0b11111_00000_00000,
+    south: 0b11111_00000_00000_00000,
+    east: 0b11111_00000_00000_00000_00000,
+    west: 0b11111_00000_00000_00000_00000_00000,
 };
 export const FaceByte = {
     _rotationMap: {

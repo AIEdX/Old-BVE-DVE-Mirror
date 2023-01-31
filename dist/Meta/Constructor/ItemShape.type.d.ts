@@ -1,5 +1,5 @@
 import { DirectionNames } from "Meta/Util.types";
-export declare type ItemShapeData = {
+export type ItemShapeData = {
     id: string;
     faces: {
         direction: DirectionNames;
@@ -8,7 +8,7 @@ export declare type ItemShapeData = {
         uvs: [number, number, number, number];
     }[];
 };
-export declare type CreateItemData = {
+export type CreateItemData = {
     positions: number[];
     normals: number[];
     indices: number[];
