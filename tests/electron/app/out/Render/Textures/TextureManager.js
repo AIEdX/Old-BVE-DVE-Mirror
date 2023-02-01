@@ -147,6 +147,7 @@ export const TextureManager = {
             map = this.noramlMapUVTexturesMap;
         }
         for (const textureType of this.textureTypes) {
+            console.log("looping for textureTypes", textureType);
             let texturePaths = [];
             let count = 1;
             const extension = this.textureExtension[textureType];

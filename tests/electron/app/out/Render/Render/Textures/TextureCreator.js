@@ -37,6 +37,7 @@ export const TextureCreator = {
         resolvedImages.push(new Uint8ClampedArray(data));
         for (const image of images) {
             const data = await this._loadImages(image, width, height);
+            console.log("inside for loop", image);
             resolvedImages.push(data);
         }
         resolvedImages.push(new Uint8ClampedArray(data));
@@ -54,7 +55,9 @@ export const TextureCreator = {
         const prom = new Promise((resolve) => {
             const loadedImage = new Image();
             loadedImage.src = imgPath;
+            console.log("loadedImage inside electron--> out--> Render--> Render", loadedImage );
             loadedImage.onload = function () {
+                console.log("Inside on load img");
                 //@ts-ignore
                 self.context.drawImage(loadedImage, 0, 0, width, height);
                 //@ts-ignore
@@ -65,6 +68,7 @@ export const TextureCreator = {
                 self.context.clearRect(0, 0, width, height);
             };
         });
+        console.log("promise is", prom);
         return prom;
     },
     _combineImageData(totalLength, arrays) {

@@ -54,6 +54,7 @@ export const TextureCreator = {
         const prom = new Promise((resolve) => {
             const loadedImage = new Image();
             loadedImage.src = imgPath;
+            console.log("loadedImage in Server", loadedImage);
             loadedImage.onload = function () {
                 //@ts-ignore
                 self.context.drawImage(loadedImage, 0, 0, width, height);
