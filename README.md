@@ -1,3 +1,5 @@
+// VScode bug tracking files in git that should be in sync with remote repo
+
 <h1 align="center">
  ⛯ Divine Voxel Engine ⛯
 </h1>
