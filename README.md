@@ -1,3 +1,6 @@
+// VScode bug tracking files in git that should be in sync with remote repo
+// Image API giving weird results with react, instead  of png file its spitting html format.
+
 <h1 align="center">
  ⛯ Divine Voxel Engine ⛯
 </h1>
