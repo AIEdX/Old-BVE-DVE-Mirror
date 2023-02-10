@@ -1,4 +1,5 @@
 export const CreateGUI = (DVER) => {
+    console.log("creatingGUI");
     let divFps = document.getElementById("fps");
     let position = document.getElementById("position");
     let chunkPosition = document.getElementById("chunk-position");
