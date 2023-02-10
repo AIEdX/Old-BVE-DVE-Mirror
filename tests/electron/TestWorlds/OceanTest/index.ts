@@ -11,6 +11,7 @@ import { RunInit, SetUpWorkers, SyncWithGraphicsSettings } from "../Shared/Creat
 import { DVER } from "../../out/Render/DivineVoxelEngineRender.js";
 import { RegisterTexutres } from "../Shared/Functions/RegisterTextures.js";
 
+console.log("Starting Ocean World");
 RegisterTexutres(DVER);
 
 const workers = SetUpWorkers(
@@ -32,6 +33,7 @@ await DVER.$INIT({
 });
 SyncWithGraphicsSettings(DVER);
 const init = async () => {
+console.log("Starting Ocean World");
  const canvas = SetUpCanvas();
  const engine = SetUpEngine(canvas);
  const scene = SetUpDarkScene(engine);
